@@ -4,9 +4,19 @@ import json
 import concurrent.futures
 from collections import defaultdict
 import os
-tickers = ['TSLA','AAPL']
-amount = 2
-document_type = "10-K"
+
+import yaml
+
+with open('data.yaml', 'r') as f:
+  data = yaml.safe_load(f)
+
+assert data['document_type'] in ["10-K","10-Q"], "The supported document types are 10-K and 10-Q"
+
+tickers = data['tickers']
+amount = data['amount']
+document_type = data['document_type']
+num_workers = data['num_workers']
+
 se = SECExtractor(tickers,amount,document_type,end_date="2022-12-31")
 #290 seconds
 os.makedirs("data",exist_ok=True)
@@ -20,7 +30,7 @@ def multiprocess_run(tic):
 
         field_urls = [field['url'] for field in fields]
         years = [field['year'] for field in fields]
-        with concurrent.futures.ProcessPoolExecutor() as executor:
+        with concurrent.futures.ProcessPoolExecutor(max_workers=num_workers) as executor:
             results = executor.map(se.get_text_from_acc_num,field_urls)
         for idx,res in enumerate(results):
             all_text,filing_type = res
@@ -29,7 +39,7 @@ def multiprocess_run(tic):
 
 if __name__ =="__main__":           
     start = time.time()
-    with concurrent.futures.ThreadPoolExecutor() as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=num_workers) as executor:
         results = executor.map(multiprocess_run,tickers)
 
     # final_dict = []
