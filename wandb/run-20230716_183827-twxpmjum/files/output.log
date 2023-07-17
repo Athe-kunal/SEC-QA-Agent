@@ -1,0 +1,25 @@
+No sentence-transformers model found with name /home/athekunal/.cache/torch/sentence_transformers/ProsusAI_finbert. Creating a new one with MEAN pooling.
+Some weights of the model checkpoint at /home/athekunal/.cache/torch/sentence_transformers/ProsusAI_finbert were not used when initializing BertModel: ['classifier.weight', 'classifier.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Traceback (most recent call last):
+  File "/home/athekunal/SEC-Project/wandb_MLOPs/main.py", line 15, in <module>
+    relevant_sentences = get_relevant_docs(llm1_output_dict,query_metadata,restore_collection)
+  File "/home/athekunal/SEC-Project/wandb_MLOPs/load_database.py", line 71, in get_relevant_docs
+    query_results = restore_collection.query(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/api/models/Collection.py", line 183, in query
+    where = validate_where(where) if where else None
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/api/types.py", line 195, in validate_where
+    raise ValueError(
+ValueError: Expected where value for $and or $or to be a list with at least two where expressions, got [{'full_metadata': 'AAPL_2022_RISK_FACTORS_10-K'}]
+Traceback (most recent call last):
+  File "/home/athekunal/SEC-Project/wandb_MLOPs/main.py", line 15, in <module>
+    relevant_sentences = get_relevant_docs(llm1_output_dict,query_metadata,restore_collection)
+  File "/home/athekunal/SEC-Project/wandb_MLOPs/load_database.py", line 71, in get_relevant_docs
+    query_results = restore_collection.query(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/api/models/Collection.py", line 183, in query
+    where = validate_where(where) if where else None
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/api/types.py", line 195, in validate_where
+    raise ValueError(
+ValueError: Expected where value for $and or $or to be a list with at least two where expressions, got [{'full_metadata': 'AAPL_2022_RISK_FACTORS_10-K'}]
+{'Section_Names': ['RISK_FACTORS'], 'Tickers': ['AAPL'], 'Years': ['2022'], 'augmented_query': ['AAPL 2022 RISK_FACTORS']}

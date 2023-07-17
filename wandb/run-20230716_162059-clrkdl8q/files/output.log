@@ -1,0 +1,83 @@
+Downloading (…)e9125/.gitattributes: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1.18k/1.18k [00:00<00:00, 6.00MB/s]
+Downloading (…)_Pooling/config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 190/190 [00:00<00:00, 974kB/s]
+Downloading (…)7e55de9125/README.md: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10.6k/10.6k [00:00<00:00, 38.3MB/s]
+Downloading (…)55de9125/config.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 612/612 [00:00<00:00, 2.99MB/s]
+Downloading (…)ce_transformers.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 116/116 [00:00<00:00, 649kB/s]
+Downloading (…)125/data_config.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 39.3k/39.3k [00:00<00:00, 6.87MB/s]
+
+
+
+
+Downloading pytorch_model.bin: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 90.9M/90.9M [00:10<00:00, 8.42MB/s]
+Downloading (…)nce_bert_config.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 53.0/53.0 [00:00<00:00, 300kB/s]
+Downloading (…)cial_tokens_map.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 112/112 [00:00<00:00, 574kB/s]
+Downloading (…)e9125/tokenizer.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 466k/466k [00:00<00:00, 3.18MB/s]
+Downloading (…)okenizer_config.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 350/350 [00:00<00:00, 1.74MB/s]
+Downloading (…)9125/train_script.py: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13.2k/13.2k [00:00<00:00, 39.6MB/s]
+Downloading (…)7e55de9125/vocab.txt: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 232k/232k [00:00<00:00, 1.82MB/s]
+Downloading (…)5de9125/modules.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 349/349 [00:00<00:00, 1.67MB/s]
+Traceback (most recent call last):
+  File "/home/athekunal/SEC-Project/wandb_MLOPs/build_database.py", line 156, in <module>
+    main()
+  File "/home/athekunal/SEC-Project/wandb_MLOPs/build_database.py", line 151, in main
+    vector_store = create_vector_store(all_splitted_doc, doc_name)
+  File "/home/athekunal/SEC-Project/wandb_MLOPs/build_database.py", line 111, in create_vector_store
+    vector_store = Chroma.from_documents(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/langchain/vectorstores/chroma.py", line 564, in from_documents
+    return cls.from_texts(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/langchain/vectorstores/chroma.py", line 528, in from_texts
+    chroma_collection.add_texts(texts=texts, metadatas=metadatas, ids=ids)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/langchain/vectorstores/chroma.py", line 184, in add_texts
+    self._collection.upsert(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/api/models/Collection.py", line 302, in upsert
+    self._client._upsert(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/api/local.py", line 349, in _upsert
+    self._add(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/api/local.py", line 291, in _add
+    self._db.add_incremental(collection_id, added_uuids, embeddings)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/db/clickhouse.py", line 638, in add_incremental
+    index.add(ids, embeddings)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/db/index/hnswlib.py", line 142, in add
+    self._init_index(dim)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/db/index/hnswlib.py", line 123, in _init_index
+    self._save()
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/db/index/hnswlib.py", line 209, in _save
+    os.makedirs(f"{self._save_folder}")
+  File "/usr/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+NotADirectoryError: [Errno 20] Not a directory: 'sec-10-K.db/index'
+Traceback (most recent call last):
+  File "/home/athekunal/SEC-Project/wandb_MLOPs/build_database.py", line 156, in <module>
+    main()
+  File "/home/athekunal/SEC-Project/wandb_MLOPs/build_database.py", line 151, in main
+    vector_store = create_vector_store(all_splitted_doc, doc_name)
+  File "/home/athekunal/SEC-Project/wandb_MLOPs/build_database.py", line 111, in create_vector_store
+    vector_store = Chroma.from_documents(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/langchain/vectorstores/chroma.py", line 564, in from_documents
+    return cls.from_texts(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/langchain/vectorstores/chroma.py", line 528, in from_texts
+    chroma_collection.add_texts(texts=texts, metadatas=metadatas, ids=ids)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/langchain/vectorstores/chroma.py", line 184, in add_texts
+    self._collection.upsert(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/api/models/Collection.py", line 302, in upsert
+    self._client._upsert(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/api/local.py", line 349, in _upsert
+    self._add(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/api/local.py", line 291, in _add
+    self._db.add_incremental(collection_id, added_uuids, embeddings)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/db/clickhouse.py", line 638, in add_incremental
+    index.add(ids, embeddings)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/db/index/hnswlib.py", line 142, in add
+    self._init_index(dim)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/db/index/hnswlib.py", line 123, in _init_index
+    self._save()
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/db/index/hnswlib.py", line 209, in _save
+    os.makedirs(f"{self._save_folder}")
+  File "/usr/lib/python3.10/os.py", line 225, in makedirs
+    mkdir(name, mode)
+NotADirectoryError: [Errno 20] Not a directory: 'sec-10-K.db/index'
+Exception ignored in atexit callback: <bound method PersistentDuckDB.persist of <chromadb.db.duckdb.PersistentDuckDB object at 0x7ff2ff312440>>
+Traceback (most recent call last):
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/db/duckdb.py", line 473, in persist
+    self._conn.execute(
+duckdb.IOException: IO Error: Cannot open file "sec-10-K.db/chroma-embeddings.parquet": Not a directory

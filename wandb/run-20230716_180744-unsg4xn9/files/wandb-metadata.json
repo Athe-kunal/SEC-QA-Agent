@@ -1,0 +1,119 @@
+{
+    "os": "Linux-5.15.90.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "python": "3.10.6",
+    "heartbeatAt": "2023-07-17T01:07:44.704971",
+    "startedAt": "2023-07-17T01:07:44.127645",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/athekunal/SEC-Project/wandb_MLOPs/main.py",
+    "codePath": "main.py",
+    "host": "LAPTOP-QF1FUNPH",
+    "username": "athekunal",
+    "executable": "/usr/bin/python3",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 1896.3899999999996,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1896.39,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.39,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.39,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.39,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.39,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.39,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.39,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.39,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.39,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.39,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.39,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.39,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.39,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.39,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.39,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.39,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "total": 1006.853931427002,
+        "used": 12.865489959716797
+    },
+    "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+            "memory_total": 4294967296
+        }
+    ],
+    "memory": {
+        "total": 7.439723968505859
+    }
+}

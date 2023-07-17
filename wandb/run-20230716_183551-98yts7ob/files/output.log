@@ -1,0 +1,22 @@
+No sentence-transformers model found with name /home/athekunal/.cache/torch/sentence_transformers/ProsusAI_finbert. Creating a new one with MEAN pooling.
+Some weights of the model checkpoint at /home/athekunal/.cache/torch/sentence_transformers/ProsusAI_finbert were not used when initializing BertModel: ['classifier.weight', 'classifier.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Relevant documents for AAPL in the year 2022 : The Company filed a counterclaim for breach of contract.
+ On September 10, 2021, the Northern California District Court ruled in favor of the Company with respect to nine out of the ten counts included in Epic’s claim, and in favor of the Company with respect to the Company’s claims for breach of contract.
+ The Northern California District Court found that certain provisions of the Company’s App Store Review Guidelines violate California’s unfair competition law and issued an injunction.Epic appealed the decision.
+ The Company filed a cross-appeal and has been granted a stay pending the appeal.
+ The Company is subject to other legal proceedings and claims that have not been fully resolved and that have arisen in the ordinary course of business.
+ The Company settled certain matters during the fourth quarter of 2022 that did not individually or in the aggregate have a material impact on the Company’s financial condition or operating results.The Company filed a counterclaim for breach of contract.
+ On September 10, 2021, the Northern California District Court ruled in favor of the Company with respect to nine out of the ten counts included in Epic’s claim, and in favor of the Company with respect to the Company’s claims for breach of contract.
+ The Northern California District Court found that certain provisions of the Company’s App Store Review Guidelines violate California’s unfair competition law and issued an injunction.
+AAPL 2022 risk factors:
+Based on the provided documents, there is no specific mention of risk factors for AAPL in the year 2022. Therefore, I cannot provide any specific information regarding AAPL's risk factors for 2022.
+AAPL 2022 market risk disclosures:
+Based on the provided documents, there is no specific mention of market risk disclosures for AAPL in the year 2022. Therefore, I cannot provide any specific information regarding AAPL's market risk disclosures for 2022.
+AAPL 2022 legal proceedings:
+According to the provided documents, the Company is subject to other legal proceedings and claims that have not been fully resolved and have arisen in the ordinary course of business. However, no specific details or outcomes of these legal proceedings are mentioned. It is important to note that the information provided is limited, and for a comprehensive understanding of AAPL's legal proceedings in 2022, it would be necessary to refer to additional sources or official filings.
+AAPL 2022 unresolved staff comments:
+There is no mention of unresolved staff comments in the provided documents for AAPL in the year 2022. Therefore, I cannot provide any specific information regarding unresolved staff comments for AAPL in 2022.
+AAPL 2022 controls and procedures:
+There is no mention of controls and procedures in the provided documents for AAPL in the year 2022. Therefore, I cannot provide any specific information regarding AAPL's controls and procedures for 2022.

@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "/home/athekunal/SEC-Project/wandb_MLOPs/build_database.py", line 160, in <module>
+    main()
+  File "/home/athekunal/SEC-Project/wandb_MLOPs/build_database.py", line 155, in main
+    vector_store = create_vector_store(all_splitted_doc, doc_name)
+  File "/home/athekunal/SEC-Project/wandb_MLOPs/build_database.py", line 117, in create_vector_store
+    vector_store = Chroma.from_documents(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/langchain/vectorstores/chroma.py", line 564, in from_documents
+    return cls.from_texts(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/langchain/vectorstores/chroma.py", line 528, in from_texts
+    chroma_collection.add_texts(texts=texts, metadatas=metadatas, ids=ids)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/langchain/vectorstores/chroma.py", line 184, in add_texts
+    self._collection.upsert(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/api/models/Collection.py", line 298, in upsert
+    ids, embeddings, metadatas, documents = self._validate_embedding_set(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/api/models/Collection.py", line 387, in _validate_embedding_set
+    raise ValueError(
+ValueError: You must provide embeddings or a function to compute them
+Traceback (most recent call last):
+  File "/home/athekunal/SEC-Project/wandb_MLOPs/build_database.py", line 160, in <module>
+    main()
+  File "/home/athekunal/SEC-Project/wandb_MLOPs/build_database.py", line 155, in main
+    vector_store = create_vector_store(all_splitted_doc, doc_name)
+  File "/home/athekunal/SEC-Project/wandb_MLOPs/build_database.py", line 117, in create_vector_store
+    vector_store = Chroma.from_documents(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/langchain/vectorstores/chroma.py", line 564, in from_documents
+    return cls.from_texts(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/langchain/vectorstores/chroma.py", line 528, in from_texts
+    chroma_collection.add_texts(texts=texts, metadatas=metadatas, ids=ids)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/langchain/vectorstores/chroma.py", line 184, in add_texts
+    self._collection.upsert(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/api/models/Collection.py", line 298, in upsert
+    ids, embeddings, metadatas, documents = self._validate_embedding_set(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/api/models/Collection.py", line 387, in _validate_embedding_set
+    raise ValueError(
+ValueError: You must provide embeddings or a function to compute them
+Exception ignored in atexit callback: <bound method PersistentDuckDB.persist of <chromadb.db.duckdb.PersistentDuckDB object at 0x7feeae5fd5a0>>
+Traceback (most recent call last):
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/db/duckdb.py", line 473, in persist
+    self._conn.execute(
+duckdb.IOException: IO Error: Cannot open file "sec-10-K.db/chroma-embeddings.parquet": Not a directory

@@ -1,0 +1,6 @@
+No sentence-transformers model found with name /home/athekunal/.cache/torch/sentence_transformers/ProsusAI_finbert. Creating a new one with MEAN pooling.
+Some weights of the model checkpoint at /home/athekunal/.cache/torch/sentence_transformers/ProsusAI_finbert were not used when initializing BertModel: ['classifier.weight', 'classifier.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+{'Section_Names': ['MANAGEMENT', 'MARKET_FOR_REGISTRANT_COMMON_EQUITY', 'MARKET_RISK_DISCLOSURES', 'FINANCIAL_STATEMENTS', 'ACCOUNTING_FEES'], 'Tickers': ['AAPL'], 'Years': ['2022', '2021'], 'augmented_query': ['What are the thoughts of Management for Apple in 2022? What are the thoughts of Management for Apple in 2021?']}
+I don't have the information regarding the thoughts of Management for Apple in 2022.

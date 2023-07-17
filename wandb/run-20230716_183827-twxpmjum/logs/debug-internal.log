@@ -1,0 +1,211 @@
+2023-07-16 18:38:27,723 INFO    StreamThr :9917 [internal.py:wandb_internal():86] W&B internal server running at pid: 9917, started at: 2023-07-16 18:38:27.722972
+2023-07-16 18:38:27,725 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: status
+2023-07-16 18:38:27,726 INFO    WriterThread:9917 [datastore.py:open_for_write():85] open: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/run-twxpmjum.wandb
+2023-07-16 18:38:27,727 DEBUG   SenderThread:9917 [sender.py:send():369] send: header
+2023-07-16 18:38:27,728 DEBUG   SenderThread:9917 [sender.py:send():369] send: run
+2023-07-16 18:38:28,153 INFO    SenderThread:9917 [dir_watcher.py:__init__():211] watching files in: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files
+2023-07-16 18:38:28,154 INFO    SenderThread:9917 [sender.py:_start_run_threads():1100] run started: twxpmjum with start time 1689557907.722242
+2023-07-16 18:38:28,154 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: summary_record
+2023-07-16 18:38:28,154 INFO    SenderThread:9917 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-16 18:38:28,155 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: check_version
+2023-07-16 18:38:28,156 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: check_version
+2023-07-16 18:38:28,293 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: run_start
+2023-07-16 18:38:28,323 DEBUG   HandlerThread:9917 [system_info.py:__init__():31] System info init
+2023-07-16 18:38:28,323 DEBUG   HandlerThread:9917 [system_info.py:__init__():46] System info init done
+2023-07-16 18:38:28,323 INFO    HandlerThread:9917 [system_monitor.py:start():181] Starting system monitor
+2023-07-16 18:38:28,323 INFO    SystemMonitor:9917 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-07-16 18:38:28,324 INFO    HandlerThread:9917 [system_monitor.py:probe():201] Collecting system info
+2023-07-16 18:38:28,325 INFO    SystemMonitor:9917 [interfaces.py:start():190] Started cpu monitoring
+2023-07-16 18:38:28,326 INFO    SystemMonitor:9917 [interfaces.py:start():190] Started disk monitoring
+2023-07-16 18:38:28,326 INFO    SystemMonitor:9917 [interfaces.py:start():190] Started gpu monitoring
+2023-07-16 18:38:28,327 INFO    SystemMonitor:9917 [interfaces.py:start():190] Started memory monitoring
+2023-07-16 18:38:28,327 INFO    SystemMonitor:9917 [interfaces.py:start():190] Started network monitoring
+2023-07-16 18:38:28,339 DEBUG   HandlerThread:9917 [system_info.py:probe():195] Probing system
+2023-07-16 18:38:28,355 ERROR   gpu       :9917 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 18:38:28,383 DEBUG   HandlerThread:9917 [gitlib.py:_init_repo():53] git repository is invalid
+2023-07-16 18:38:28,383 DEBUG   HandlerThread:9917 [system_info.py:probe():240] Probing system done
+2023-07-16 18:38:28,384 DEBUG   HandlerThread:9917 [system_monitor.py:probe():210] {'os': 'Linux-5.15.90.1-microsoft-standard-WSL2-x86_64-with-glibc2.35', 'python': '3.10.6', 'heartbeatAt': '2023-07-17T01:38:28.339934', 'startedAt': '2023-07-17T01:38:27.717510', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/athekunal/SEC-Project/wandb_MLOPs/main.py', 'codePath': 'main.py', 'host': 'LAPTOP-QF1FUNPH', 'username': 'athekunal', 'executable': '/usr/bin/python3', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 1896.3899999999996, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 1006.853931427002, 'used': 12.86697006225586}, 'gpu': 'NVIDIA GeForce RTX 3050 Ti Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3050 Ti Laptop GPU', 'memory_total': 4294967296}], 'memory': {'total': 7.439723968505859}}
+2023-07-16 18:38:28,384 INFO    HandlerThread:9917 [system_monitor.py:probe():211] Finished collecting system info
+2023-07-16 18:38:28,384 INFO    HandlerThread:9917 [system_monitor.py:probe():214] Publishing system info
+2023-07-16 18:38:28,384 DEBUG   HandlerThread:9917 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-07-16 18:38:28,384 DEBUG   HandlerThread:9917 [system_info.py:_save_pip():67] Saving pip packages done
+2023-07-16 18:38:28,384 INFO    HandlerThread:9917 [system_monitor.py:probe():216] Finished publishing system info
+2023-07-16 18:38:28,386 DEBUG   SenderThread:9917 [sender.py:send():369] send: files
+2023-07-16 18:38:28,386 INFO    SenderThread:9917 [sender.py:_save_file():1354] saving file wandb-metadata.json with policy now
+2023-07-16 18:38:28,390 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-16 18:38:28,391 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: stop_status
+2023-07-16 18:38:28,667 DEBUG   SenderThread:9917 [sender.py:send():369] send: telemetry
+2023-07-16 18:38:28,668 DEBUG   SenderThread:9917 [sender.py:send():369] send: telemetry
+2023-07-16 18:38:28,668 DEBUG   SenderThread:9917 [sender.py:send():369] send: telemetry
+2023-07-16 18:38:28,865 INFO    wandb-upload_0:9917 [upload_job.py:push():133] Uploaded file /tmp/tmpp7bo_h_0wandb/rqhkyhx7-wandb-metadata.json
+2023-07-16 18:38:29,155 INFO    Thread-12 :9917 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/wandb-metadata.json
+2023-07-16 18:38:29,155 INFO    Thread-12 :9917 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/requirements.txt
+2023-07-16 18:38:29,155 INFO    Thread-12 :9917 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/wandb-summary.json
+2023-07-16 18:38:29,456 DEBUG   SenderThread:9917 [sender.py:send():369] send: telemetry
+2023-07-16 18:38:29,702 DEBUG   SenderThread:9917 [sender.py:send():369] send: telemetry
+2023-07-16 18:38:29,868 DEBUG   SenderThread:9917 [sender.py:send():369] send: telemetry
+2023-07-16 18:38:29,954 DEBUG   SenderThread:9917 [sender.py:send():369] send: telemetry
+2023-07-16 18:38:29,992 DEBUG   SenderThread:9917 [sender.py:send():369] send: telemetry
+2023-07-16 18:38:30,056 DEBUG   SenderThread:9917 [sender.py:send():369] send: telemetry
+2023-07-16 18:38:30,364 ERROR   gpu       :9917 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 18:38:31,155 INFO    Thread-12 :9917 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/output.log
+2023-07-16 18:38:32,371 ERROR   gpu       :9917 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 18:38:33,156 INFO    Thread-12 :9917 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/output.log
+2023-07-16 18:38:33,714 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: status_report
+2023-07-16 18:38:34,379 ERROR   gpu       :9917 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 18:38:36,005 DEBUG   SenderThread:9917 [sender.py:send():369] send: metric
+2023-07-16 18:38:36,005 DEBUG   SenderThread:9917 [sender.py:send():369] send: metric
+2023-07-16 18:38:36,005 DEBUG   SenderThread:9917 [sender.py:send():369] send: telemetry
+2023-07-16 18:38:36,005 DEBUG   SenderThread:9917 [sender.py:send():369] send: metric
+2023-07-16 18:38:36,005 DEBUG   SenderThread:9917 [sender.py:send():369] send: metric
+2023-07-16 18:38:36,005 DEBUG   SenderThread:9917 [sender.py:send():369] send: metric
+2023-07-16 18:38:36,301 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: log_artifact
+2023-07-16 18:38:36,301 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: log_artifact
+2023-07-16 18:38:36,389 ERROR   gpu       :9917 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 18:38:36,719 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-16 18:38:37,158 INFO    Thread-12 :9917 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/media/table/stats_0_ca4c84f0e4b121865073.table.json
+2023-07-16 18:38:37,158 INFO    Thread-12 :9917 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/media/table
+2023-07-16 18:38:37,159 INFO    Thread-12 :9917 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/media
+2023-07-16 18:38:37,552 INFO    wandb-upload_0:9917 [upload_job.py:push():91] Uploaded file /home/athekunal/.local/share/wandb/artifacts/staging/tmp9tck_ved
+2023-07-16 18:38:37,578 INFO    wandb-upload_1:9917 [upload_job.py:push():133] Uploaded file /tmp/tmpp7bo_h_0wandb/mri0j8zw-media/table/stats_0_ca4c84f0e4b121865073.table.json
+2023-07-16 18:38:38,399 ERROR   gpu       :9917 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 18:38:38,423 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: poll_exit
+2023-07-16 18:38:38,449 INFO    SenderThread:9917 [sender.py:send_request_log_artifact():1414] logged artifact run-twxpmjum-stats - {'id': 'QXJ0aWZhY3Q6NTE0MzM5ODY2', 'digest': '09f54b00456a9f017b62d09cb0b33e10', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjgzMjYxNjgy', 'latestArtifact': None}, 'version': 'latest'}
+2023-07-16 18:38:38,449 DEBUG   SenderThread:9917 [sender.py:send():369] send: files
+2023-07-16 18:38:38,449 INFO    SenderThread:9917 [sender.py:_save_file():1354] saving file media/table/stats_0_ca4c84f0e4b121865073.table.json with policy now
+2023-07-16 18:38:38,450 DEBUG   SenderThread:9917 [sender.py:send():369] send: history
+2023-07-16 18:38:38,450 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: summary_record
+2023-07-16 18:38:38,453 INFO    SenderThread:9917 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-16 18:38:38,454 DEBUG   SenderThread:9917 [sender.py:send():369] send: exit
+2023-07-16 18:38:38,454 INFO    SenderThread:9917 [sender.py:send_exit():574] handling exit code: 1
+2023-07-16 18:38:38,454 INFO    SenderThread:9917 [sender.py:send_exit():576] handling runtime: 9
+2023-07-16 18:38:38,454 INFO    SenderThread:9917 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-16 18:38:38,454 INFO    SenderThread:9917 [sender.py:send_exit():582] send defer
+2023-07-16 18:38:38,455 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: poll_exit
+2023-07-16 18:38:38,455 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 18:38:38,457 INFO    HandlerThread:9917 [handler.py:handle_request_defer():170] handle defer: 0
+2023-07-16 18:38:38,457 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: defer
+2023-07-16 18:38:38,457 INFO    SenderThread:9917 [sender.py:send_request_defer():598] handle sender defer: 0
+2023-07-16 18:38:38,457 INFO    SenderThread:9917 [sender.py:transition_state():602] send defer: 1
+2023-07-16 18:38:38,458 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 18:38:38,458 INFO    HandlerThread:9917 [handler.py:handle_request_defer():170] handle defer: 1
+2023-07-16 18:38:38,458 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: defer
+2023-07-16 18:38:38,458 INFO    SenderThread:9917 [sender.py:send_request_defer():598] handle sender defer: 1
+2023-07-16 18:38:38,458 INFO    SenderThread:9917 [sender.py:transition_state():602] send defer: 2
+2023-07-16 18:38:38,458 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 18:38:38,458 INFO    HandlerThread:9917 [handler.py:handle_request_defer():170] handle defer: 2
+2023-07-16 18:38:38,458 INFO    HandlerThread:9917 [system_monitor.py:finish():190] Stopping system monitor
+2023-07-16 18:38:38,458 DEBUG   SystemMonitor:9917 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-07-16 18:38:38,459 INFO    HandlerThread:9917 [interfaces.py:finish():202] Joined cpu monitor
+2023-07-16 18:38:38,459 DEBUG   SystemMonitor:9917 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-07-16 18:38:38,459 INFO    HandlerThread:9917 [interfaces.py:finish():202] Joined disk monitor
+2023-07-16 18:38:38,459 DEBUG   SystemMonitor:9917 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-07-16 18:38:38,471 INFO    HandlerThread:9917 [interfaces.py:finish():202] Joined gpu monitor
+2023-07-16 18:38:38,471 INFO    HandlerThread:9917 [interfaces.py:finish():202] Joined memory monitor
+2023-07-16 18:38:38,471 INFO    HandlerThread:9917 [interfaces.py:finish():202] Joined network monitor
+2023-07-16 18:38:38,472 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: defer
+2023-07-16 18:38:38,472 INFO    SenderThread:9917 [sender.py:send_request_defer():598] handle sender defer: 2
+2023-07-16 18:38:38,472 INFO    SenderThread:9917 [sender.py:transition_state():602] send defer: 3
+2023-07-16 18:38:38,472 DEBUG   SenderThread:9917 [sender.py:send():369] send: stats
+2023-07-16 18:38:38,472 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 18:38:38,472 INFO    HandlerThread:9917 [handler.py:handle_request_defer():170] handle defer: 3
+2023-07-16 18:38:38,472 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: defer
+2023-07-16 18:38:38,472 INFO    SenderThread:9917 [sender.py:send_request_defer():598] handle sender defer: 3
+2023-07-16 18:38:38,472 INFO    SenderThread:9917 [sender.py:transition_state():602] send defer: 4
+2023-07-16 18:38:38,472 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 18:38:38,472 INFO    HandlerThread:9917 [handler.py:handle_request_defer():170] handle defer: 4
+2023-07-16 18:38:38,473 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: defer
+2023-07-16 18:38:38,473 INFO    SenderThread:9917 [sender.py:send_request_defer():598] handle sender defer: 4
+2023-07-16 18:38:38,473 INFO    SenderThread:9917 [sender.py:transition_state():602] send defer: 5
+2023-07-16 18:38:38,473 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 18:38:38,473 INFO    HandlerThread:9917 [handler.py:handle_request_defer():170] handle defer: 5
+2023-07-16 18:38:38,473 DEBUG   SenderThread:9917 [sender.py:send():369] send: summary
+2023-07-16 18:38:38,474 INFO    SenderThread:9917 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-16 18:38:38,474 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: defer
+2023-07-16 18:38:38,474 INFO    SenderThread:9917 [sender.py:send_request_defer():598] handle sender defer: 5
+2023-07-16 18:38:38,474 INFO    SenderThread:9917 [sender.py:transition_state():602] send defer: 6
+2023-07-16 18:38:38,474 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 18:38:38,474 INFO    HandlerThread:9917 [handler.py:handle_request_defer():170] handle defer: 6
+2023-07-16 18:38:38,474 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: defer
+2023-07-16 18:38:38,474 INFO    SenderThread:9917 [sender.py:send_request_defer():598] handle sender defer: 6
+2023-07-16 18:38:38,476 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: status_report
+2023-07-16 18:38:38,659 INFO    SenderThread:9917 [sender.py:transition_state():602] send defer: 7
+2023-07-16 18:38:38,660 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 18:38:38,660 INFO    HandlerThread:9917 [handler.py:handle_request_defer():170] handle defer: 7
+2023-07-16 18:38:38,660 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: defer
+2023-07-16 18:38:38,660 INFO    SenderThread:9917 [sender.py:send_request_defer():598] handle sender defer: 7
+2023-07-16 18:38:38,947 INFO    wandb-upload_0:9917 [upload_job.py:push():133] Uploaded file /tmp/tmpp7bo_h_0wandb/effezvmg-media/table/stats_0_ca4c84f0e4b121865073.table.json
+2023-07-16 18:38:39,159 INFO    Thread-12 :9917 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/config.yaml
+2023-07-16 18:38:39,159 INFO    Thread-12 :9917 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/output.log
+2023-07-16 18:38:39,159 INFO    Thread-12 :9917 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/wandb-summary.json
+2023-07-16 18:38:39,423 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: poll_exit
+2023-07-16 18:38:40,457 INFO    SenderThread:9917 [sender.py:transition_state():602] send defer: 8
+2023-07-16 18:38:40,458 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: poll_exit
+2023-07-16 18:38:40,458 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 18:38:40,458 INFO    HandlerThread:9917 [handler.py:handle_request_defer():170] handle defer: 8
+2023-07-16 18:38:40,458 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: defer
+2023-07-16 18:38:40,459 INFO    SenderThread:9917 [sender.py:send_request_defer():598] handle sender defer: 8
+2023-07-16 18:38:40,459 INFO    SenderThread:9917 [job_builder.py:build():240] Attempting to build job artifact
+2023-07-16 18:38:40,459 INFO    SenderThread:9917 [job_builder.py:build():274] no source found
+2023-07-16 18:38:40,459 INFO    SenderThread:9917 [sender.py:transition_state():602] send defer: 9
+2023-07-16 18:38:40,459 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 18:38:40,459 INFO    HandlerThread:9917 [handler.py:handle_request_defer():170] handle defer: 9
+2023-07-16 18:38:40,459 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: defer
+2023-07-16 18:38:40,459 INFO    SenderThread:9917 [sender.py:send_request_defer():598] handle sender defer: 9
+2023-07-16 18:38:40,459 INFO    SenderThread:9917 [dir_watcher.py:finish():359] shutting down directory watcher
+2023-07-16 18:38:41,161 INFO    SenderThread:9917 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/output.log
+2023-07-16 18:38:41,162 INFO    SenderThread:9917 [dir_watcher.py:finish():389] scan: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files
+2023-07-16 18:38:41,162 INFO    SenderThread:9917 [dir_watcher.py:finish():403] scan save: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/output.log output.log
+2023-07-16 18:38:41,162 INFO    SenderThread:9917 [dir_watcher.py:finish():403] scan save: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/requirements.txt requirements.txt
+2023-07-16 18:38:41,165 INFO    SenderThread:9917 [dir_watcher.py:finish():403] scan save: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/config.yaml config.yaml
+2023-07-16 18:38:41,167 INFO    SenderThread:9917 [dir_watcher.py:finish():403] scan save: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/wandb-metadata.json wandb-metadata.json
+2023-07-16 18:38:41,167 INFO    SenderThread:9917 [dir_watcher.py:finish():403] scan save: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/wandb-summary.json wandb-summary.json
+2023-07-16 18:38:41,172 INFO    SenderThread:9917 [dir_watcher.py:finish():403] scan save: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/media/table/stats_0_ca4c84f0e4b121865073.table.json media/table/stats_0_ca4c84f0e4b121865073.table.json
+2023-07-16 18:38:41,172 INFO    SenderThread:9917 [sender.py:transition_state():602] send defer: 10
+2023-07-16 18:38:41,172 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 18:38:41,172 INFO    HandlerThread:9917 [handler.py:handle_request_defer():170] handle defer: 10
+2023-07-16 18:38:41,173 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: defer
+2023-07-16 18:38:41,173 INFO    SenderThread:9917 [sender.py:send_request_defer():598] handle sender defer: 10
+2023-07-16 18:38:41,173 INFO    SenderThread:9917 [file_pusher.py:finish():159] shutting down file pusher
+2023-07-16 18:38:41,592 INFO    wandb-upload_0:9917 [upload_job.py:push():133] Uploaded file /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/requirements.txt
+2023-07-16 18:38:41,839 INFO    wandb-upload_1:9917 [upload_job.py:push():133] Uploaded file /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/output.log
+2023-07-16 18:38:41,919 INFO    wandb-upload_3:9917 [upload_job.py:push():133] Uploaded file /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/wandb-summary.json
+2023-07-16 18:38:42,077 INFO    wandb-upload_2:9917 [upload_job.py:push():133] Uploaded file /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/files/config.yaml
+2023-07-16 18:38:42,278 INFO    Thread-11 (_thread_body):9917 [sender.py:transition_state():602] send defer: 11
+2023-07-16 18:38:42,278 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 18:38:42,278 INFO    HandlerThread:9917 [handler.py:handle_request_defer():170] handle defer: 11
+2023-07-16 18:38:42,279 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: defer
+2023-07-16 18:38:42,279 INFO    SenderThread:9917 [sender.py:send_request_defer():598] handle sender defer: 11
+2023-07-16 18:38:42,279 INFO    SenderThread:9917 [file_pusher.py:join():164] waiting for file pusher
+2023-07-16 18:38:42,279 INFO    SenderThread:9917 [sender.py:transition_state():602] send defer: 12
+2023-07-16 18:38:42,279 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 18:38:42,279 INFO    HandlerThread:9917 [handler.py:handle_request_defer():170] handle defer: 12
+2023-07-16 18:38:42,279 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: defer
+2023-07-16 18:38:42,279 INFO    SenderThread:9917 [sender.py:send_request_defer():598] handle sender defer: 12
+2023-07-16 18:38:42,413 INFO    SenderThread:9917 [sender.py:transition_state():602] send defer: 13
+2023-07-16 18:38:42,413 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 18:38:42,413 INFO    HandlerThread:9917 [handler.py:handle_request_defer():170] handle defer: 13
+2023-07-16 18:38:42,414 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: defer
+2023-07-16 18:38:42,414 INFO    SenderThread:9917 [sender.py:send_request_defer():598] handle sender defer: 13
+2023-07-16 18:38:42,414 INFO    SenderThread:9917 [sender.py:transition_state():602] send defer: 14
+2023-07-16 18:38:42,414 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 18:38:42,414 DEBUG   SenderThread:9917 [sender.py:send():369] send: final
+2023-07-16 18:38:42,414 INFO    HandlerThread:9917 [handler.py:handle_request_defer():170] handle defer: 14
+2023-07-16 18:38:42,414 DEBUG   SenderThread:9917 [sender.py:send():369] send: footer
+2023-07-16 18:38:42,415 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: defer
+2023-07-16 18:38:42,415 INFO    SenderThread:9917 [sender.py:send_request_defer():598] handle sender defer: 14
+2023-07-16 18:38:42,415 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: poll_exit
+2023-07-16 18:38:42,416 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: poll_exit
+2023-07-16 18:38:42,416 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: server_info
+2023-07-16 18:38:42,416 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: get_summary
+2023-07-16 18:38:42,417 DEBUG   SenderThread:9917 [sender.py:send_request():396] send_request: server_info
+2023-07-16 18:38:42,417 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: sampled_history
+2023-07-16 18:38:42,522 INFO    MainThread:9917 [wandb_run.py:_footer_history_summary_info():3464] rendering history
+2023-07-16 18:38:42,522 INFO    MainThread:9917 [wandb_run.py:_footer_history_summary_info():3496] rendering summary
+2023-07-16 18:38:42,522 INFO    MainThread:9917 [wandb_run.py:_footer_sync_info():3423] logging synced files
+2023-07-16 18:38:42,523 DEBUG   HandlerThread:9917 [handler.py:handle_request():144] handle_request: shutdown
+2023-07-16 18:38:42,523 INFO    HandlerThread:9917 [handler.py:finish():854] shutting down handler
+2023-07-16 18:38:43,417 INFO    WriterThread:9917 [datastore.py:close():298] close: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_183827-twxpmjum/run-twxpmjum.wandb
+2023-07-16 18:38:43,522 INFO    SenderThread:9917 [sender.py:finish():1526] shutting down sender
+2023-07-16 18:38:43,522 INFO    SenderThread:9917 [file_pusher.py:finish():159] shutting down file pusher
+2023-07-16 18:38:43,522 INFO    SenderThread:9917 [file_pusher.py:join():164] waiting for file pusher

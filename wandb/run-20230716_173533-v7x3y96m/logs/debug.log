@@ -1,0 +1,27 @@
+2023-07-16 17:35:33,410 INFO    MainThread:4966 [wandb_setup.py:_flush():76] Current SDK version is 0.15.5
+2023-07-16 17:35:33,410 INFO    MainThread:4966 [wandb_setup.py:_flush():76] Configure stats pid to 4966
+2023-07-16 17:35:33,410 INFO    MainThread:4966 [wandb_setup.py:_flush():76] Loading settings from /home/athekunal/.config/wandb/settings
+2023-07-16 17:35:33,410 INFO    MainThread:4966 [wandb_setup.py:_flush():76] Loading settings from /home/athekunal/SEC-Project/wandb_MLOPs/wandb/settings
+2023-07-16 17:35:33,410 INFO    MainThread:4966 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-07-16 17:35:33,410 INFO    MainThread:4966 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-07-16 17:35:33,410 INFO    MainThread:4966 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program': '/home/athekunal/SEC-Project/wandb_MLOPs/main.py'}
+2023-07-16 17:35:33,410 INFO    MainThread:4966 [wandb_init.py:_log_setup():507] Logging user logs to /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_173533-v7x3y96m/logs/debug.log
+2023-07-16 17:35:33,410 INFO    MainThread:4966 [wandb_init.py:_log_setup():508] Logging internal logs to /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_173533-v7x3y96m/logs/debug-internal.log
+2023-07-16 17:35:33,410 INFO    MainThread:4966 [wandb_init.py:init():547] calling init triggers
+2023-07-16 17:35:33,410 INFO    MainThread:4966 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {}
+2023-07-16 17:35:33,410 INFO    MainThread:4966 [wandb_init.py:init():596] starting backend
+2023-07-16 17:35:33,410 INFO    MainThread:4966 [wandb_init.py:init():600] setting up manager
+2023-07-16 17:35:33,411 INFO    MainThread:4966 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-07-16 17:35:33,412 INFO    MainThread:4966 [wandb_init.py:init():606] backend started and connected
+2023-07-16 17:35:33,413 INFO    MainThread:4966 [wandb_init.py:init():705] updated telemetry
+2023-07-16 17:35:33,413 INFO    MainThread:4966 [wandb_init.py:init():738] communicating run to backend with 60.0 second timeout
+2023-07-16 17:35:34,520 INFO    MainThread:4966 [wandb_run.py:_on_init():2173] communicating current version
+2023-07-16 17:35:34,659 INFO    MainThread:4966 [wandb_run.py:_on_init():2182] got version response 
+2023-07-16 17:35:34,659 INFO    MainThread:4966 [wandb_init.py:init():789] starting run threads in backend
+2023-07-16 17:35:34,675 INFO    MainThread:4966 [wandb_run.py:_console_start():2152] atexit reg
+2023-07-16 17:35:34,676 INFO    MainThread:4966 [wandb_run.py:_redirect():2007] redirect: SettingsConsole.WRAP_RAW
+2023-07-16 17:35:34,676 INFO    MainThread:4966 [wandb_run.py:_redirect():2072] Wrapping output streams.
+2023-07-16 17:35:34,676 INFO    MainThread:4966 [wandb_run.py:_redirect():2097] Redirects installed.
+2023-07-16 17:35:34,676 INFO    MainThread:4966 [wandb_init.py:init():830] run started, returning control to user process
+2023-07-16 17:35:42,045 WARNING MsgRouterThr:4966 [router.py:message_loop():77] message_loop has been closed

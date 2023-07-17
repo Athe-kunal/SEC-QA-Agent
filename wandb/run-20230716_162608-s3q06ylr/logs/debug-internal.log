@@ -1,0 +1,279 @@
+2023-07-16 16:26:08,721 INFO    StreamThr :1838 [internal.py:wandb_internal():86] W&B internal server running at pid: 1838, started at: 2023-07-16 16:26:08.720651
+2023-07-16 16:26:08,723 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: status
+2023-07-16 16:26:08,725 INFO    WriterThread:1838 [datastore.py:open_for_write():85] open: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/run-s3q06ylr.wandb
+2023-07-16 16:26:08,726 DEBUG   SenderThread:1838 [sender.py:send():369] send: header
+2023-07-16 16:26:08,726 DEBUG   SenderThread:1838 [sender.py:send():369] send: run
+2023-07-16 16:26:09,120 INFO    SenderThread:1838 [dir_watcher.py:__init__():211] watching files in: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files
+2023-07-16 16:26:09,120 INFO    SenderThread:1838 [sender.py:_start_run_threads():1100] run started: s3q06ylr with start time 1689549968.719301
+2023-07-16 16:26:09,121 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: summary_record
+2023-07-16 16:26:09,121 INFO    SenderThread:1838 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-16 16:26:09,122 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: check_version
+2023-07-16 16:26:09,122 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: check_version
+2023-07-16 16:26:09,291 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: run_start
+2023-07-16 16:26:09,318 DEBUG   HandlerThread:1838 [system_info.py:__init__():31] System info init
+2023-07-16 16:26:09,318 DEBUG   HandlerThread:1838 [system_info.py:__init__():46] System info init done
+2023-07-16 16:26:09,318 INFO    HandlerThread:1838 [system_monitor.py:start():181] Starting system monitor
+2023-07-16 16:26:09,318 INFO    SystemMonitor:1838 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-07-16 16:26:09,319 INFO    HandlerThread:1838 [system_monitor.py:probe():201] Collecting system info
+2023-07-16 16:26:09,320 INFO    SystemMonitor:1838 [interfaces.py:start():190] Started cpu monitoring
+2023-07-16 16:26:09,321 INFO    SystemMonitor:1838 [interfaces.py:start():190] Started disk monitoring
+2023-07-16 16:26:09,322 INFO    SystemMonitor:1838 [interfaces.py:start():190] Started gpu monitoring
+2023-07-16 16:26:09,323 INFO    SystemMonitor:1838 [interfaces.py:start():190] Started memory monitoring
+2023-07-16 16:26:09,324 INFO    SystemMonitor:1838 [interfaces.py:start():190] Started network monitoring
+2023-07-16 16:26:09,335 DEBUG   HandlerThread:1838 [system_info.py:probe():195] Probing system
+2023-07-16 16:26:09,353 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:09,377 DEBUG   HandlerThread:1838 [gitlib.py:_init_repo():53] git repository is invalid
+2023-07-16 16:26:09,377 DEBUG   HandlerThread:1838 [system_info.py:probe():240] Probing system done
+2023-07-16 16:26:09,377 DEBUG   HandlerThread:1838 [system_monitor.py:probe():210] {'os': 'Linux-5.15.90.1-microsoft-standard-WSL2-x86_64-with-glibc2.35', 'python': '3.10.6', 'heartbeatAt': '2023-07-16T23:26:09.335501', 'startedAt': '2023-07-16T23:26:08.713227', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/athekunal/SEC-Project/wandb_MLOPs/build_database.py', 'codePath': 'build_database.py', 'host': 'LAPTOP-QF1FUNPH', 'username': 'athekunal', 'executable': '/usr/bin/python3', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 1896.3899999999996, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}, {'current': 1896.39, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 1006.853931427002, 'used': 12.408393859863281}, 'gpu': 'NVIDIA GeForce RTX 3050 Ti Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3050 Ti Laptop GPU', 'memory_total': 4294967296}], 'memory': {'total': 7.439723968505859}}
+2023-07-16 16:26:09,377 INFO    HandlerThread:1838 [system_monitor.py:probe():211] Finished collecting system info
+2023-07-16 16:26:09,377 INFO    HandlerThread:1838 [system_monitor.py:probe():214] Publishing system info
+2023-07-16 16:26:09,377 DEBUG   HandlerThread:1838 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-07-16 16:26:09,378 DEBUG   HandlerThread:1838 [system_info.py:_save_pip():67] Saving pip packages done
+2023-07-16 16:26:09,378 INFO    HandlerThread:1838 [system_monitor.py:probe():216] Finished publishing system info
+2023-07-16 16:26:09,380 DEBUG   SenderThread:1838 [sender.py:send():369] send: files
+2023-07-16 16:26:09,380 INFO    SenderThread:1838 [sender.py:_save_file():1354] saving file wandb-metadata.json with policy now
+2023-07-16 16:26:09,384 DEBUG   SenderThread:1838 [sender.py:send():369] send: telemetry
+2023-07-16 16:26:09,385 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-16 16:26:09,386 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: stop_status
+2023-07-16 16:26:09,981 INFO    wandb-upload_0:1838 [upload_job.py:push():133] Uploaded file /tmp/tmpbk8wu9xkwandb/16cb1dll-wandb-metadata.json
+2023-07-16 16:26:10,121 INFO    Thread-12 :1838 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files/wandb-metadata.json
+2023-07-16 16:26:10,122 INFO    Thread-12 :1838 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files/requirements.txt
+2023-07-16 16:26:10,122 INFO    Thread-12 :1838 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files/wandb-summary.json
+2023-07-16 16:26:11,358 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:13,364 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:14,633 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: status_report
+2023-07-16 16:26:15,372 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:17,379 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:19,385 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:19,634 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: status_report
+2023-07-16 16:26:21,393 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:23,399 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:24,383 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-16 16:26:24,384 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: stop_status
+2023-07-16 16:26:25,407 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:25,495 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: status_report
+2023-07-16 16:26:27,413 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:29,421 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:30,496 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: status_report
+2023-07-16 16:26:31,427 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:33,430 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:35,434 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:35,497 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: status_report
+2023-07-16 16:26:37,439 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:39,384 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-16 16:26:39,384 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: stop_status
+2023-07-16 16:26:39,451 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:40,512 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: status_report
+2023-07-16 16:26:41,129 INFO    Thread-12 :1838 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files/config.yaml
+2023-07-16 16:26:41,456 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:43,461 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:45,466 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:45,689 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: status_report
+2023-07-16 16:26:47,471 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:49,477 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:50,690 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: status_report
+2023-07-16 16:26:51,482 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:53,488 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:54,384 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-16 16:26:54,385 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: stop_status
+2023-07-16 16:26:55,494 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:56,503 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: status_report
+2023-07-16 16:26:57,500 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:59,506 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:26:59,636 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: log_artifact
+2023-07-16 16:26:59,636 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: log_artifact
+2023-07-16 16:27:00,135 INFO    Thread-12 :1838 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files/output.log
+2023-07-16 16:27:00,640 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: poll_exit
+2023-07-16 16:27:01,510 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:01,977 INFO    wandb-upload_4:1838 [upload_job.py:push():91] Uploaded file /home/athekunal/.local/share/wandb/artifacts/staging/tmpr72p2ec9
+2023-07-16 16:27:02,008 INFO    wandb-upload_1:1838 [upload_job.py:push():91] Uploaded file /home/athekunal/.local/share/wandb/artifacts/staging/tmpvodtd9jk
+2023-07-16 16:27:02,136 INFO    Thread-12 :1838 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files/output.log
+2023-07-16 16:27:03,080 INFO    wandb-upload_5:1838 [upload_job.py:push():91] Uploaded file /home/athekunal/.local/share/wandb/artifacts/staging/tmpkq66qsax
+2023-07-16 16:27:03,488 INFO    wandb-upload_2:1838 [upload_job.py:push():91] Uploaded file /home/athekunal/.local/share/wandb/artifacts/staging/tmpbj_qrmrc
+2023-07-16 16:27:03,517 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:05,526 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:05,640 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: keepalive
+2023-07-16 16:27:07,534 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:09,325 DEBUG   SystemMonitor:1838 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-07-16 16:27:09,551 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:10,641 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: keepalive
+2023-07-16 16:27:11,556 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:13,563 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:15,571 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:15,642 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: keepalive
+2023-07-16 16:27:17,579 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:19,586 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:20,644 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: keepalive
+2023-07-16 16:27:21,593 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:23,601 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:25,608 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:25,645 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: keepalive
+2023-07-16 16:27:27,616 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:29,626 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:30,647 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: keepalive
+2023-07-16 16:27:31,636 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:33,644 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:35,648 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: keepalive
+2023-07-16 16:27:35,652 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:37,661 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:39,676 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:40,650 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: keepalive
+2023-07-16 16:27:41,682 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:43,691 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:45,651 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: keepalive
+2023-07-16 16:27:45,699 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:47,708 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:49,716 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:50,652 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: keepalive
+2023-07-16 16:27:51,724 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:53,732 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:55,654 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: keepalive
+2023-07-16 16:27:55,741 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:56,775 INFO    wandb-upload_3:1838 [upload_job.py:push():91] Uploaded file /home/athekunal/.local/share/wandb/artifacts/staging/tmp1vv060el
+2023-07-16 16:27:57,748 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:27:59,757 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:28:00,655 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: keepalive
+2023-07-16 16:28:01,765 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:28:03,772 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:28:05,657 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: keepalive
+2023-07-16 16:28:05,780 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:28:07,789 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:28:09,806 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:28:10,658 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: keepalive
+2023-07-16 16:28:11,814 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:28:13,822 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:28:15,660 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: keepalive
+2023-07-16 16:28:15,829 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:28:17,836 ERROR   gpu       :1838 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-16 16:28:18,048 INFO    wandb-upload_0:1838 [upload_job.py:push():91] Uploaded file /home/athekunal/.local/share/wandb/artifacts/staging/tmp01h85bqf
+2023-07-16 16:28:18,794 INFO    SenderThread:1838 [sender.py:send_request_log_artifact():1414] logged artifact vector_store - {'id': 'QXJ0aWZhY3Q6NTE0Mjc4NDQw', 'digest': '2306c3fa55927e733c11bd69c9e94be6', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjgzMjQzNjUw', 'latestArtifact': None}, 'version': 'latest'}
+2023-07-16 16:28:18,794 DEBUG   SenderThread:1838 [sender.py:send():369] send: telemetry
+2023-07-16 16:28:18,794 DEBUG   SenderThread:1838 [sender.py:send():369] send: exit
+2023-07-16 16:28:18,794 INFO    SenderThread:1838 [sender.py:send_exit():574] handling exit code: 0
+2023-07-16 16:28:18,795 INFO    SenderThread:1838 [sender.py:send_exit():576] handling runtime: 50
+2023-07-16 16:28:18,797 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: status_report
+2023-07-16 16:28:18,797 INFO    SenderThread:1838 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-16 16:28:18,797 INFO    SenderThread:1838 [sender.py:send_exit():582] send defer
+2023-07-16 16:28:18,798 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: poll_exit
+2023-07-16 16:28:18,798 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 16:28:18,798 INFO    HandlerThread:1838 [handler.py:handle_request_defer():170] handle defer: 0
+2023-07-16 16:28:18,798 DEBUG   SenderThread:1838 [sender.py:send():369] send: stats
+2023-07-16 16:28:18,799 DEBUG   SenderThread:1838 [sender.py:send():369] send: stats
+2023-07-16 16:28:18,799 DEBUG   SenderThread:1838 [sender.py:send():369] send: stats
+2023-07-16 16:28:18,799 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: defer
+2023-07-16 16:28:18,799 INFO    SenderThread:1838 [sender.py:send_request_defer():598] handle sender defer: 0
+2023-07-16 16:28:18,800 INFO    SenderThread:1838 [sender.py:transition_state():602] send defer: 1
+2023-07-16 16:28:18,800 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 16:28:18,800 INFO    HandlerThread:1838 [handler.py:handle_request_defer():170] handle defer: 1
+2023-07-16 16:28:18,800 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: defer
+2023-07-16 16:28:18,800 INFO    SenderThread:1838 [sender.py:send_request_defer():598] handle sender defer: 1
+2023-07-16 16:28:18,800 INFO    SenderThread:1838 [sender.py:transition_state():602] send defer: 2
+2023-07-16 16:28:18,800 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 16:28:18,800 INFO    HandlerThread:1838 [handler.py:handle_request_defer():170] handle defer: 2
+2023-07-16 16:28:18,800 INFO    HandlerThread:1838 [system_monitor.py:finish():190] Stopping system monitor
+2023-07-16 16:28:18,801 DEBUG   SystemMonitor:1838 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-07-16 16:28:18,801 DEBUG   SystemMonitor:1838 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-07-16 16:28:18,802 INFO    HandlerThread:1838 [interfaces.py:finish():202] Joined cpu monitor
+2023-07-16 16:28:18,802 INFO    HandlerThread:1838 [interfaces.py:finish():202] Joined disk monitor
+2023-07-16 16:28:18,811 INFO    HandlerThread:1838 [interfaces.py:finish():202] Joined gpu monitor
+2023-07-16 16:28:18,811 INFO    HandlerThread:1838 [interfaces.py:finish():202] Joined memory monitor
+2023-07-16 16:28:18,811 INFO    HandlerThread:1838 [interfaces.py:finish():202] Joined network monitor
+2023-07-16 16:28:18,812 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: defer
+2023-07-16 16:28:18,812 INFO    SenderThread:1838 [sender.py:send_request_defer():598] handle sender defer: 2
+2023-07-16 16:28:18,812 INFO    SenderThread:1838 [sender.py:transition_state():602] send defer: 3
+2023-07-16 16:28:18,812 DEBUG   SenderThread:1838 [sender.py:send():369] send: stats
+2023-07-16 16:28:18,812 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 16:28:18,812 INFO    HandlerThread:1838 [handler.py:handle_request_defer():170] handle defer: 3
+2023-07-16 16:28:18,812 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: defer
+2023-07-16 16:28:18,812 INFO    SenderThread:1838 [sender.py:send_request_defer():598] handle sender defer: 3
+2023-07-16 16:28:18,813 INFO    SenderThread:1838 [sender.py:transition_state():602] send defer: 4
+2023-07-16 16:28:18,813 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 16:28:18,813 INFO    HandlerThread:1838 [handler.py:handle_request_defer():170] handle defer: 4
+2023-07-16 16:28:18,813 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: defer
+2023-07-16 16:28:18,813 INFO    SenderThread:1838 [sender.py:send_request_defer():598] handle sender defer: 4
+2023-07-16 16:28:18,813 INFO    SenderThread:1838 [sender.py:transition_state():602] send defer: 5
+2023-07-16 16:28:18,813 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 16:28:18,813 INFO    HandlerThread:1838 [handler.py:handle_request_defer():170] handle defer: 5
+2023-07-16 16:28:18,813 DEBUG   SenderThread:1838 [sender.py:send():369] send: summary
+2023-07-16 16:28:18,814 INFO    SenderThread:1838 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-16 16:28:18,814 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: defer
+2023-07-16 16:28:18,814 INFO    SenderThread:1838 [sender.py:send_request_defer():598] handle sender defer: 5
+2023-07-16 16:28:18,814 INFO    SenderThread:1838 [sender.py:transition_state():602] send defer: 6
+2023-07-16 16:28:18,814 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 16:28:18,814 INFO    HandlerThread:1838 [handler.py:handle_request_defer():170] handle defer: 6
+2023-07-16 16:28:18,814 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: defer
+2023-07-16 16:28:18,814 INFO    SenderThread:1838 [sender.py:send_request_defer():598] handle sender defer: 6
+2023-07-16 16:28:18,816 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: status_report
+2023-07-16 16:28:19,012 INFO    SenderThread:1838 [sender.py:transition_state():602] send defer: 7
+2023-07-16 16:28:19,013 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 16:28:19,013 INFO    HandlerThread:1838 [handler.py:handle_request_defer():170] handle defer: 7
+2023-07-16 16:28:19,013 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: defer
+2023-07-16 16:28:19,013 INFO    SenderThread:1838 [sender.py:send_request_defer():598] handle sender defer: 7
+2023-07-16 16:28:19,168 INFO    Thread-12 :1838 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files/config.yaml
+2023-07-16 16:28:19,169 INFO    Thread-12 :1838 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files/wandb-summary.json
+2023-07-16 16:28:19,273 INFO    SenderThread:1838 [sender.py:transition_state():602] send defer: 8
+2023-07-16 16:28:19,274 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 16:28:19,274 INFO    HandlerThread:1838 [handler.py:handle_request_defer():170] handle defer: 8
+2023-07-16 16:28:19,274 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: defer
+2023-07-16 16:28:19,274 INFO    SenderThread:1838 [sender.py:send_request_defer():598] handle sender defer: 8
+2023-07-16 16:28:19,274 INFO    SenderThread:1838 [job_builder.py:build():240] Attempting to build job artifact
+2023-07-16 16:28:19,275 INFO    SenderThread:1838 [job_builder.py:build():274] no source found
+2023-07-16 16:28:19,275 INFO    SenderThread:1838 [sender.py:transition_state():602] send defer: 9
+2023-07-16 16:28:19,275 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 16:28:19,275 INFO    HandlerThread:1838 [handler.py:handle_request_defer():170] handle defer: 9
+2023-07-16 16:28:19,275 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: defer
+2023-07-16 16:28:19,275 INFO    SenderThread:1838 [sender.py:send_request_defer():598] handle sender defer: 9
+2023-07-16 16:28:19,275 INFO    SenderThread:1838 [dir_watcher.py:finish():359] shutting down directory watcher
+2023-07-16 16:28:20,169 INFO    Thread-12 :1838 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files/output.log
+2023-07-16 16:28:20,170 INFO    SenderThread:1838 [dir_watcher.py:finish():389] scan: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files
+2023-07-16 16:28:20,170 INFO    SenderThread:1838 [dir_watcher.py:finish():403] scan save: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files/output.log output.log
+2023-07-16 16:28:20,170 INFO    SenderThread:1838 [dir_watcher.py:finish():403] scan save: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files/requirements.txt requirements.txt
+2023-07-16 16:28:20,170 INFO    SenderThread:1838 [dir_watcher.py:finish():403] scan save: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files/config.yaml config.yaml
+2023-07-16 16:28:20,170 INFO    SenderThread:1838 [dir_watcher.py:finish():403] scan save: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files/wandb-metadata.json wandb-metadata.json
+2023-07-16 16:28:20,171 INFO    SenderThread:1838 [dir_watcher.py:finish():403] scan save: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files/wandb-summary.json wandb-summary.json
+2023-07-16 16:28:20,176 INFO    SenderThread:1838 [sender.py:transition_state():602] send defer: 10
+2023-07-16 16:28:20,176 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 16:28:20,178 INFO    HandlerThread:1838 [handler.py:handle_request_defer():170] handle defer: 10
+2023-07-16 16:28:20,179 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: defer
+2023-07-16 16:28:20,180 INFO    SenderThread:1838 [sender.py:send_request_defer():598] handle sender defer: 10
+2023-07-16 16:28:20,180 INFO    SenderThread:1838 [file_pusher.py:finish():159] shutting down file pusher
+2023-07-16 16:28:20,662 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: keepalive
+2023-07-16 16:28:20,676 INFO    wandb-upload_1:1838 [upload_job.py:push():133] Uploaded file /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files/requirements.txt
+2023-07-16 16:28:20,941 INFO    wandb-upload_4:1838 [upload_job.py:push():133] Uploaded file /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files/output.log
+2023-07-16 16:28:21,059 INFO    wandb-upload_2:1838 [upload_job.py:push():133] Uploaded file /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files/config.yaml
+2023-07-16 16:28:21,196 INFO    wandb-upload_0:1838 [upload_job.py:push():133] Uploaded file /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/files/wandb-summary.json
+2023-07-16 16:28:21,397 INFO    Thread-11 (_thread_body):1838 [sender.py:transition_state():602] send defer: 11
+2023-07-16 16:28:21,397 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 16:28:21,397 INFO    HandlerThread:1838 [handler.py:handle_request_defer():170] handle defer: 11
+2023-07-16 16:28:21,398 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: defer
+2023-07-16 16:28:21,398 INFO    SenderThread:1838 [sender.py:send_request_defer():598] handle sender defer: 11
+2023-07-16 16:28:21,398 INFO    SenderThread:1838 [file_pusher.py:join():164] waiting for file pusher
+2023-07-16 16:28:21,398 INFO    SenderThread:1838 [sender.py:transition_state():602] send defer: 12
+2023-07-16 16:28:21,398 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 16:28:21,398 INFO    HandlerThread:1838 [handler.py:handle_request_defer():170] handle defer: 12
+2023-07-16 16:28:21,399 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: defer
+2023-07-16 16:28:21,399 INFO    SenderThread:1838 [sender.py:send_request_defer():598] handle sender defer: 12
+2023-07-16 16:28:21,837 INFO    SenderThread:1838 [sender.py:transition_state():602] send defer: 13
+2023-07-16 16:28:21,837 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 16:28:21,837 INFO    HandlerThread:1838 [handler.py:handle_request_defer():170] handle defer: 13
+2023-07-16 16:28:21,838 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: defer
+2023-07-16 16:28:21,838 INFO    SenderThread:1838 [sender.py:send_request_defer():598] handle sender defer: 13
+2023-07-16 16:28:21,838 INFO    SenderThread:1838 [sender.py:transition_state():602] send defer: 14
+2023-07-16 16:28:21,838 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: defer
+2023-07-16 16:28:21,838 INFO    HandlerThread:1838 [handler.py:handle_request_defer():170] handle defer: 14
+2023-07-16 16:28:21,839 DEBUG   SenderThread:1838 [sender.py:send():369] send: final
+2023-07-16 16:28:21,839 DEBUG   SenderThread:1838 [sender.py:send():369] send: footer
+2023-07-16 16:28:21,839 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: defer
+2023-07-16 16:28:21,839 INFO    SenderThread:1838 [sender.py:send_request_defer():598] handle sender defer: 14
+2023-07-16 16:28:21,840 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: poll_exit
+2023-07-16 16:28:21,840 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: server_info
+2023-07-16 16:28:21,840 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: poll_exit
+2023-07-16 16:28:21,840 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: get_summary
+2023-07-16 16:28:21,841 DEBUG   SenderThread:1838 [sender.py:send_request():396] send_request: server_info
+2023-07-16 16:28:21,841 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: sampled_history
+2023-07-16 16:28:21,973 DEBUG   HandlerThread:1838 [handler.py:handle_request():144] handle_request: shutdown
+2023-07-16 16:28:21,974 INFO    HandlerThread:1838 [handler.py:finish():854] shutting down handler
+2023-07-16 16:28:22,841 INFO    WriterThread:1838 [datastore.py:close():298] close: /home/athekunal/SEC-Project/wandb_MLOPs/wandb/run-20230716_162608-s3q06ylr/run-s3q06ylr.wandb
+2023-07-16 16:28:22,973 INFO    SenderThread:1838 [sender.py:finish():1526] shutting down sender
+2023-07-16 16:28:22,973 INFO    SenderThread:1838 [file_pusher.py:finish():159] shutting down file pusher
+2023-07-16 16:28:22,973 INFO    SenderThread:1838 [file_pusher.py:join():164] waiting for file pusher
