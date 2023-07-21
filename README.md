@@ -19,3 +19,8 @@ To run the streamlit application, run
 streamlit run streamlit.py
 ```
 
+Sample Answer Screenshot
+
+![Sample Answer](https://github.com/Athe-kunal/SEC-QA-Agent/blob/main/Sample%20Answer.png)
+
+
