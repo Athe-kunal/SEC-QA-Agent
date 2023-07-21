@@ -1,4 +1,0 @@
-
-No sentence-transformers model found with name /home/athekunal/.cache/torch/sentence_transformers/ProsusAI_finbert. Creating a new one with MEAN pooling.
-Some weights of the model checkpoint at /home/athekunal/.cache/torch/sentence_transformers/ProsusAI_finbert were not used when initializing BertModel: ['classifier.bias', 'classifier.weight']
-- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
