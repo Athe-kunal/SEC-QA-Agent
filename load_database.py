@@ -7,8 +7,12 @@ from chromadb.api.types import Documents, EmbeddingFunction, Embeddings
 from chromadb.config import Settings
 import chromadb
 from collections import defaultdict
-from utils import *
+from utils import key_modifier,modify_all_keys,get_query_metadata,get_relevant_sentences,maximal_marginal_relevance
 from config import NUM_RESULTS
+from chromadb.utils import embedding_functions
+import numpy as np
+import itertools
+
 finbert_embed = HuggingFaceEmbeddings(model_name="ProsusAI/finbert")
 
 class FinBertEmbeddings(EmbeddingFunction):
@@ -94,3 +98,41 @@ def get_relevant_docs(llm1_output_dict,query_metadata,restore_collection):
         relevant_sentences+="\n\n"
     
     return relevant_sentences
+
+def get_relevant_dict_with_mmr(llm1_output_dict,restore_collection,user_query,doc_name="10-K"):
+    section_names = llm1_output_dict['Section_Names']
+    ticker_names = llm1_output_dict['Tickers']
+    years = llm1_output_dict['Years']
+    all_relevant_docs = defaultdict()
+    default_ef = embedding_functions.DefaultEmbeddingFunction()
+    query_embed = default_ef(texts=user_query)
+    query_embed_arr = np.array(query_embed[0])
+
+    for tic in ticker_names:
+        for yr in years:
+            individual_metadata = [{"full_metadata":elem[0]+"_"+elem[1]+"_"+elem[2]+"_"+doc_name} for elem in list(itertools.product([tic],[yr],section_names))]
+            where_clause = {"$or":individual_metadata}
+            query_results = restore_collection.query(
+            query_texts=user_query,
+            n_results=20,
+            where=where_clause,
+            include=["metadatas","documents","distances","embeddings"]
+            )
+            idxs = maximal_marginal_relevance(query_embed_arr,query_results['embeddings'][0],k=10)
+            relevant_docs = [query_results['documents'][0][i] for i in idxs]
+            relevant_metadata = [ query_results['metadatas'][0][i] for i in idxs]
+            all_relevant_docs[f"{tic}_{yr}"] = {"docs":relevant_docs,"metadata":relevant_metadata}
+
+    return all_relevant_docs
+
+def get_relevant_docs_via_mmr(relevant_docs_dict:dict):
+    relevant_sentences = ""
+
+    for key,value in relevant_docs_dict.items():
+        tic,year = key.split("_")
+        relevant_sentences+=f"Relevant documents for {tic} in the year {year}"+": "
+        relevant_sentences+="\n".join(value['docs'])
+        relevant_sentences+="\n\n"
+    
+    return relevant_sentences
+

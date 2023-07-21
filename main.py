@@ -1,6 +1,7 @@
 from LLM1 import get_response_llm1
 from LLM2 import get_response_llm2
-from load_database import download_vector_store_wandb,load_vector_store_local, get_relevant_docs
+from load_database import download_vector_store_wandb,load_vector_store_local, get_relevant_docs,get_relevant_docs_via_mmr
+from load_database import get_relevant_dict_with_mmr,get_relevant_docs_via_mmr
 from utils import get_query_metadata
 with open("user_request.txt","r") as f:
     USER_REQUEST = f.read()
@@ -8,11 +9,14 @@ with open("user_request.txt","r") as f:
 restore_collection = load_vector_store_local("./sec-10-K","10-K",if_finbert=False)
 
 def SEC_LLM(USER_REQUEST):
-    llm1_output_dict, query_metadata = get_response_llm1(USER_REQUEST,"10-K")
-    # print(llm1_output_dict)
-    # llm1_output_dict = {'Section_Names': ['MARKET_FOR_REGISTRANT_COMMON_EQUITY', 'MANAGEMENT_DISCUSSION', 'MARKET_RISK_DISCLOSURES', 'FINANCIAL_STATEMENTS', 'ACCOUNTING_FEES'], 'Tickers': ['AAPL', 'GOOGL'], 'Years': ['2022'], 'augmented_query': ['How much is AAPL buying back shares for the year 2022?', 'How much is GOOGL buying back shares for the year 2022?']}
+    # llm1_output_dict, query_metadata = get_response_llm1(USER_REQUEST,"10-K")
+    llm1_output_dict = get_response_llm1(USER_REQUEST,"10-K")
+    # llm1_output_dict = {'Section_Names': ['RISK FACTORS', 'MARKET RISK DISCLOSURES', 'LEGAL PROCEEDINGS', 'UNRESOLVED STAFF COMMENTS', 'MINE SAFETY'], 'Tickers': ['AAPL'], 'Years': ['2021', '2022'], 'augmented_query': ['Compare the risk associated with Apple stock for the year 2021', 'Compare the risk associated with Apple stock for the year 2022']}
     # query_metadata = get_query_metadata(llm1_output_dict)
-    relevant_sentences = get_relevant_docs(llm1_output_dict,query_metadata,restore_collection)
+    # relevant_sentences = get_relevant_docs(llm1_output_dict,query_metadata,restore_collection)
+    relevant_dict = get_relevant_dict_with_mmr(llm1_output_dict,restore_collection,USER_REQUEST)
+    # print(relevant_dict)
+    relevant_sentences = get_relevant_docs_via_mmr(relevant_dict)
     # print(relevant_sentences)
     llm2_output = get_response_llm2(relevant_sentences,USER_REQUEST,llm1_output_dict)
     # print(llm2_output)

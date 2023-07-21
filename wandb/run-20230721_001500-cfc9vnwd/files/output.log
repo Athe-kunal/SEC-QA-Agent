@@ -1,0 +1,112 @@
+
+No sentence-transformers model found with name /home/athekunal/.cache/torch/sentence_transformers/ProsusAI_finbert. Creating a new one with MEAN pooling.
+Some weights of the model checkpoint at /home/athekunal/.cache/torch/sentence_transformers/ProsusAI_finbert were not used when initializing BertModel: ['classifier.bias', 'classifier.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+defaultdict(None, {'AMZN_2022': {'docs': ['Revenue from such arrangements is recognized over the subscription period.\n We provide advertising services to sellers, vendors, publishers, authors, and others, through programs such as sponsored ads, display, and video advertising.\n Revenue is recognized as ads are delivered based on the number of clicks or impressions.\n Our AWS arrangements include global sales of compute, storage, database, and other services.', 'INDEX TO CONSOLIDATED FINANCIAL STATEMENTS We have audited the accompanying consolidated balance sheets of Amazon.\ncom, Inc.\n (the Company) as of December\xa031, 2021 and 2020, and the related consolidated statements of operations, comprehensive income, stockholders’ equity, and cash flows for each of the three years in the period ended December\xa031, 2021, and the related notes (collectively referred to as the “consolidated financial statements”).', 'These costs are allocated to segments based on usage.\n The increase in technology and content costs in absolute dollars in 2021, compared to the prior year, is primarily due to an increase in spending on technology infrastructure and increased payroll and related costs associated with technical teams responsible for expanding our existing products and services and initiatives to introduce new products and service offerings.', 'We also develop original video content for which the production costs are capitalized and amortized to “Cost of sales” predominantly on an accelerated basis that follows the viewing patterns associated with the content.\n The weighted average remaining life of our capitalized video content is 2.\n6 years.\n Our produced and licensed video content is primarily monetized together as a unit, referred to as a film group, in each major geography where we offer Amazon Prime memberships.', 'During 2020, we acquired certain companies for an aggregate purchase price of $1.\n2 billion, net of cash acquired, of which $1.\n1 billion was capitalized to in-process research and development intangible assets (“IPR&D”).\n During 2021, we acquired certain companies for an aggregate purchase price of $496 million, net of cash acquired.\n The primary reason for all acquisitions was to acquire technologies and know-how to enable Amazon to serve customers more effectively.', 'We provided guidance on February\xa03, 2022, in our earnings release furnished on Form\xa08-K as set forth below.\n These forward-looking statements reflect Amazon.\ncom’s expectations as of February\xa03, 2022, and are subject to substantial uncertainty.', 'We expect our International sales growth rate to decelerate in Q1 2022 compared to the increase we experienced in Q1 2021.\n Changes in foreign currency exchange rates impacted International net sales by $1.\n7 billion and $3.\n0 billion in 2020 and 2021.\n AWS sales increased 37% in 2021, compared to the prior year.\n The sales growth primarily reflects increased customer usage, partially offset by pricing changes.', '1 billion and $46.\n3 billion in 2020 and 2021.\n Our operating cash flows result primarily from cash received from our consumer, seller, developer, enterprise, and content creator customers, and advertisers, offset by cash payments we make for products and services, employee compensation, payment processing and related transaction costs, operating leases, and interest payments on our long-term obligations.', '0 billion.\n Included in “Other long-term liabilities” on our consolidated balance sheets was $1.\n9 billion and $2.\n2 billion of unearned revenue as of December\xa031, 2020 and 2021.\n Additionally, we have performance obligations, primarily related to AWS, associated with commitments in customer contracts for future services that have not yet been recognized in our financial statements.\n For contracts with original terms that exceed one year, those commitments not yet recognized were $80.', '3 billion and $2.\n6 billion as of December\xa031, 2020 and 2021.\n We provide Fulfillment by Amazon services in connection with certain of our sellers’ programs.\n Third-party sellers maintain ownership of their inventory, regardless of whether fulfillment is provided by us or the third-party sellers, and therefore these products are not included in our inventories.'], 'metadata': [{'full_metadata': 'AMZN_2022_FINANCIAL_STATEMENTS_10-K'}, {'full_metadata': 'AMZN_2022_FINANCIAL_STATEMENTS_10-K'}, {'full_metadata': 'AMZN_2022_MANAGEMENT_DISCUSSION_10-K'}, {'full_metadata': 'AMZN_2022_FINANCIAL_STATEMENTS_10-K'}, {'full_metadata': 'AMZN_2022_FINANCIAL_STATEMENTS_10-K'}, {'full_metadata': 'AMZN_2022_MANAGEMENT_DISCUSSION_10-K'}, {'full_metadata': 'AMZN_2022_MANAGEMENT_DISCUSSION_10-K'}, {'full_metadata': 'AMZN_2022_MANAGEMENT_DISCUSSION_10-K'}, {'full_metadata': 'AMZN_2022_FINANCIAL_STATEMENTS_10-K'}, {'full_metadata': 'AMZN_2022_FINANCIAL_STATEMENTS_10-K'}]}, 'AMZN_2021': {'docs': ['“Proceeds from short-term debt, and other” were reclassified from “Proceeds from long-term debt and other” and “Repayments of short-term debt, and other” were reclassified from “Repayments of long-term debt and other” on our consolidated statements of cash flows.\n The consolidated financial statements include the accounts of Amazon.\ncom, Inc.', '1 billion, $1.\n4 billion, and $1.\n9 billion for 2018, 2019, and 2020.', 'As a measure of sensitivity, for every 1% of additional inventory valuation allowance as of December\xa031, 2020, we would have recorded an additional cost of sales of approximately $270\xa0million.\n In addition, we enter into supplier commitments for certain electronic device components and certain products.\n These commitments are based on forecasted customer demand.\n If we reduce these commitments, we may incur additional costs.\n We are subject to income taxes in the U.\nS.', 'Revenue from such arrangements is recognized over the subscription period.\n Our AWS arrangements include global sales of compute, storage, database, and other services.\n Revenue is allocated to services using stand-alone selling prices and is primarily recognized when the customer uses these services, based on the quantity of services rendered, such as compute or storage capacity delivered on-demand.', 'We dispute the allegations of wrongdoing and intend to defend ourselves vigorously in this matter.\n Beginning in March 2020, a number of class-action complaints were filed alleging, among other things, price fixing arrangements between Amazon.\ncom, Inc.\n and third-party sellers in Amazon’s stores, monopolization and attempted monopolization of an alleged market in online retail or other submarkets, and consumer protection and unjust enrichment claims.\n In March 2020, Frame-Wilson v.\n Amazon.', 'We also develop original video content for which the production costs are capitalized and amortized to “Cost of sales” predominantly on an accelerated basis that follows the viewing patterns associated with the content.\n The weighted average remaining life of our capitalized video content is 2.\n5 years.\n Our produced and licensed video content is primarily monetized together as a unit, referred to as a film group, in each major geography where we offer Amazon Prime memberships.', 'We provided guidance on February\xa02, 2021, in our earnings release furnished on Form\xa08-K as set forth below.\n These forward-looking statements reflect Amazon.\ncom’s expectations as of February\xa02, 2021, and are subject to substantial uncertainty.', 'While costs associated with Amazon Prime membership benefits and other shipping offers are not included in marketing expense, we view these offers as effective worldwide marketing tools, and intend to continue offering them indefinitely.\n The increase in general and administrative costs in absolute dollars in 2020, compared to the prior year, is primarily due to increases in payroll and related expenses and professional service fees.', 'During 2020, we acquired certain companies for an aggregate purchase price of $1.\n2 billion, net of cash acquired, of which $1.\n1 billion was capitalized to in-process research and development intangible assets (“IPR&D”).\n The primary reason for all acquisitions was to acquire technologies and know-how to enable Amazon to serve customers more effectively.\n Acquisition-related costs were expensed as incurred.', 'Changes in foreign currency exchange rates impacted International net sales by $(2.\n4) billion and $1.\n7 billion in 2019 and 2020.\n AWS sales increased 30% in 2020, compared to the prior year.\n The sales growth primarily reflects increased customer usage, partially offset by pricing changes.\n Pricing changes were driven largely by our continued efforts to reduce prices for our customers.'], 'metadata': [{'full_metadata': 'AMZN_2021_FINANCIAL_STATEMENTS_10-K'}, {'full_metadata': 'AMZN_2021_FINANCIAL_STATEMENTS_10-K'}, {'full_metadata': 'AMZN_2021_MANAGEMENT_DISCUSSION_10-K'}, {'full_metadata': 'AMZN_2021_FINANCIAL_STATEMENTS_10-K'}, {'full_metadata': 'AMZN_2021_FINANCIAL_STATEMENTS_10-K'}, {'full_metadata': 'AMZN_2021_FINANCIAL_STATEMENTS_10-K'}, {'full_metadata': 'AMZN_2021_MANAGEMENT_DISCUSSION_10-K'}, {'full_metadata': 'AMZN_2021_MANAGEMENT_DISCUSSION_10-K'}, {'full_metadata': 'AMZN_2021_FINANCIAL_STATEMENTS_10-K'}, {'full_metadata': 'AMZN_2021_MANAGEMENT_DISCUSSION_10-K'}]}})
+Relevant documents for AMZN in the year 2022: Revenue from such arrangements is recognized over the subscription period.
+ We provide advertising services to sellers, vendors, publishers, authors, and others, through programs such as sponsored ads, display, and video advertising.
+ Revenue is recognized as ads are delivered based on the number of clicks or impressions.
+ Our AWS arrangements include global sales of compute, storage, database, and other services.
+INDEX TO CONSOLIDATED FINANCIAL STATEMENTS We have audited the accompanying consolidated balance sheets of Amazon.
+com, Inc.
+ (the Company) as of December31, 2021 and 2020, and the related consolidated statements of operations, comprehensive income, stockholders’ equity, and cash flows for each of the three years in the period ended December31, 2021, and the related notes (collectively referred to as the “consolidated financial statements”).
+These costs are allocated to segments based on usage.
+ The increase in technology and content costs in absolute dollars in 2021, compared to the prior year, is primarily due to an increase in spending on technology infrastructure and increased payroll and related costs associated with technical teams responsible for expanding our existing products and services and initiatives to introduce new products and service offerings.
+We also develop original video content for which the production costs are capitalized and amortized to “Cost of sales” predominantly on an accelerated basis that follows the viewing patterns associated with the content.
+ The weighted average remaining life of our capitalized video content is 2.
+6 years.
+ Our produced and licensed video content is primarily monetized together as a unit, referred to as a film group, in each major geography where we offer Amazon Prime memberships.
+During 2020, we acquired certain companies for an aggregate purchase price of $1.
+2 billion, net of cash acquired, of which $1.
+1 billion was capitalized to in-process research and development intangible assets (“IPR&D”).
+ During 2021, we acquired certain companies for an aggregate purchase price of $496 million, net of cash acquired.
+ The primary reason for all acquisitions was to acquire technologies and know-how to enable Amazon to serve customers more effectively.
+We provided guidance on February3, 2022, in our earnings release furnished on Form8-K as set forth below.
+ These forward-looking statements reflect Amazon.
+com’s expectations as of February3, 2022, and are subject to substantial uncertainty.
+We expect our International sales growth rate to decelerate in Q1 2022 compared to the increase we experienced in Q1 2021.
+ Changes in foreign currency exchange rates impacted International net sales by $1.
+7 billion and $3.
+0 billion in 2020 and 2021.
+ AWS sales increased 37% in 2021, compared to the prior year.
+ The sales growth primarily reflects increased customer usage, partially offset by pricing changes.
+1 billion and $46.
+3 billion in 2020 and 2021.
+ Our operating cash flows result primarily from cash received from our consumer, seller, developer, enterprise, and content creator customers, and advertisers, offset by cash payments we make for products and services, employee compensation, payment processing and related transaction costs, operating leases, and interest payments on our long-term obligations.
+0 billion.
+ Included in “Other long-term liabilities” on our consolidated balance sheets was $1.
+9 billion and $2.
+2 billion of unearned revenue as of December31, 2020 and 2021.
+ Additionally, we have performance obligations, primarily related to AWS, associated with commitments in customer contracts for future services that have not yet been recognized in our financial statements.
+ For contracts with original terms that exceed one year, those commitments not yet recognized were $80.
+3 billion and $2.
+6 billion as of December31, 2020 and 2021.
+ We provide Fulfillment by Amazon services in connection with certain of our sellers’ programs.
+ Third-party sellers maintain ownership of their inventory, regardless of whether fulfillment is provided by us or the third-party sellers, and therefore these products are not included in our inventories.
+Relevant documents for AMZN in the year 2021: “Proceeds from short-term debt, and other” were reclassified from “Proceeds from long-term debt and other” and “Repayments of short-term debt, and other” were reclassified from “Repayments of long-term debt and other” on our consolidated statements of cash flows.
+ The consolidated financial statements include the accounts of Amazon.
+com, Inc.
+1 billion, $1.
+4 billion, and $1.
+9 billion for 2018, 2019, and 2020.
+As a measure of sensitivity, for every 1% of additional inventory valuation allowance as of December31, 2020, we would have recorded an additional cost of sales of approximately $270million.
+ In addition, we enter into supplier commitments for certain electronic device components and certain products.
+ These commitments are based on forecasted customer demand.
+ If we reduce these commitments, we may incur additional costs.
+ We are subject to income taxes in the U.
+S.
+Revenue from such arrangements is recognized over the subscription period.
+ Our AWS arrangements include global sales of compute, storage, database, and other services.
+ Revenue is allocated to services using stand-alone selling prices and is primarily recognized when the customer uses these services, based on the quantity of services rendered, such as compute or storage capacity delivered on-demand.
+We dispute the allegations of wrongdoing and intend to defend ourselves vigorously in this matter.
+ Beginning in March 2020, a number of class-action complaints were filed alleging, among other things, price fixing arrangements between Amazon.
+com, Inc.
+ and third-party sellers in Amazon’s stores, monopolization and attempted monopolization of an alleged market in online retail or other submarkets, and consumer protection and unjust enrichment claims.
+ In March 2020, Frame-Wilson v.
+ Amazon.
+We also develop original video content for which the production costs are capitalized and amortized to “Cost of sales” predominantly on an accelerated basis that follows the viewing patterns associated with the content.
+ The weighted average remaining life of our capitalized video content is 2.
+5 years.
+ Our produced and licensed video content is primarily monetized together as a unit, referred to as a film group, in each major geography where we offer Amazon Prime memberships.
+We provided guidance on February2, 2021, in our earnings release furnished on Form8-K as set forth below.
+ These forward-looking statements reflect Amazon.
+com’s expectations as of February2, 2021, and are subject to substantial uncertainty.
+While costs associated with Amazon Prime membership benefits and other shipping offers are not included in marketing expense, we view these offers as effective worldwide marketing tools, and intend to continue offering them indefinitely.
+ The increase in general and administrative costs in absolute dollars in 2020, compared to the prior year, is primarily due to increases in payroll and related expenses and professional service fees.
+During 2020, we acquired certain companies for an aggregate purchase price of $1.
+2 billion, net of cash acquired, of which $1.
+1 billion was capitalized to in-process research and development intangible assets (“IPR&D”).
+ The primary reason for all acquisitions was to acquire technologies and know-how to enable Amazon to serve customers more effectively.
+ Acquisition-related costs were expensed as incurred.
+Changes in foreign currency exchange rates impacted International net sales by $(2.
+4) billion and $1.
+7 billion in 2019 and 2020.
+ AWS sales increased 30% in 2020, compared to the prior year.
+ The sales growth primarily reflects increased customer usage, partially offset by pricing changes.
+ Pricing changes were driven largely by our continued efforts to reduce prices for our customers.
+[34m  Stopping...
+[34m  Stopping...
+[34m  Stopping...
+Exception ignored in atexit callback: <bound method PersistentDuckDB.persist of <chromadb.db.duckdb.PersistentDuckDB object at 0x7ff72509a650>>
+Traceback (most recent call last):
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/db/duckdb.py", line 473, in persist
+    self._conn.execute(
+RuntimeError: Query interrupted
+Exception ignored in atexit callback: <bound method PersistentDuckDB.persist of <chromadb.db.duckdb.PersistentDuckDB object at 0x7ff72504aa70>>
+Traceback (most recent call last):
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/db/duckdb.py", line 473, in persist
+    self._conn.execute(
+RuntimeError: Query interrupted
+Exception ignored in atexit callback: <bound method PersistentDuckDB.persist of <chromadb.db.duckdb.PersistentDuckDB object at 0x7ff7252f9c30>>
+Traceback (most recent call last):
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/db/duckdb.py", line 473, in persist
+    self._conn.execute(
+RuntimeError: Query interrupted
+[34m  Stopping...
+[34m  Stopping...
+Exception ignored in atexit callback: <bound method PersistentDuckDB.persist of <chromadb.db.duckdb.PersistentDuckDB object at 0x7ff848a784f0>>
+Traceback (most recent call last):
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/db/duckdb.py", line 473, in persist
+    self._conn.execute(
+RuntimeError: Query interrupted

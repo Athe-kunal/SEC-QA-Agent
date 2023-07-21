@@ -88,6 +88,6 @@ def get_response_llm1(USER_REQUEST:str,filing_type:str="10-K")->dict:
     llm1_output_dict['Section_Names'] = [i.upper() for i in llm1_output_dict['Section_Names']]
 # print(llm1_output_dict)
 
-    query_metadata = get_query_metadata(llm1_output_dict)
-    return llm1_output_dict, query_metadata
+    # query_metadata = get_query_metadata(llm1_output_dict)
+    return llm1_output_dict
 

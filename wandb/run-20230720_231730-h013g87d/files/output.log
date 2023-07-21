@@ -1,0 +1,31 @@
+
+No sentence-transformers model found with name /home/athekunal/.cache/torch/sentence_transformers/ProsusAI_finbert. Creating a new one with MEAN pooling.
+Some weights of the model checkpoint at /home/athekunal/.cache/torch/sentence_transformers/ProsusAI_finbert were not used when initializing BertModel: ['classifier.weight', 'classifier.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+2023-07-20 23:17:56.912 Uncaught app exception
+Traceback (most recent call last):
+  File "/home/athekunal/.local/lib/python3.10/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 552, in _run_script
+    exec(code, module.__dict__)
+  File "/home/athekunal/SEC-Project/SEC-QA-Agent/streamlit.py", line 13, in <module>
+    generate_response(text)
+  File "/home/athekunal/SEC-Project/SEC-QA-Agent/streamlit.py", line 7, in generate_response
+    st.info(SEC_LLM(input_text))
+  File "/home/athekunal/SEC-Project/SEC-QA-Agent/main.py", line 17, in SEC_LLM
+    relevant_dict = get_relevant_dict_with_mmr(llm1_output_dict,restore_collection,USER_REQUEST)
+  File "/home/athekunal/SEC-Project/SEC-QA-Agent/load_database.py", line 112, in get_relevant_dict_with_mmr
+    individual_metadata = [{"full_metadata":elem[0]+"_"+elem[1]+"_"+elem[2]+"_"+doc_name} for elem in list(itertools.product([tic],[yr],section_names))]
+NameError: name 'itertools' is not defined
+[34m  Stopping...
+[34m  Stopping...
+[34m  Stopping...
+Exception ignored in atexit callback: <bound method PersistentDuckDB.persist of <chromadb.db.duckdb.PersistentDuckDB object at 0x7fc8b3ec2950>>
+Traceback (most recent call last):
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/db/duckdb.py", line 473, in persist
+    self._conn.execute(
+RuntimeError: Query interrupted
+Exception ignored in atexit callback: <bound method PersistentDuckDB.persist of <chromadb.db.duckdb.PersistentDuckDB object at 0x7fc90b5f61d0>>
+Traceback (most recent call last):
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/db/duckdb.py", line 473, in persist
+    self._conn.execute(
+RuntimeError: Query interrupted

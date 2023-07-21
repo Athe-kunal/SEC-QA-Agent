@@ -16,12 +16,12 @@ def modify_all_keys(dictionary, key_modifier):
         modified_dict[new_key] = value
     return modified_dict
 
-def get_query_metadata(llm1_output_dict):
+def get_query_metadata(llm1_output_dict,doc_name:str):
     section_names = llm1_output_dict['Section_Names']
     ticker_names = llm1_output_dict['Tickers']
     years = llm1_output_dict['Years']
 
-    query_metadata = [{"full_metadata":elem[0]+"_"+elem[1]+"_"+elem[2]+"_10-K"} for elem in list(itertools.product(ticker_names,years,section_names))]
+    query_metadata = [{"full_metadata":elem[0]+"_"+elem[1]+"_"+elem[2]+"_"+doc_name} for elem in list(itertools.product(ticker_names,years,section_names))]
 
     return query_metadata
 

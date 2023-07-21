@@ -1,0 +1,27 @@
+
+No sentence-transformers model found with name /home/athekunal/.cache/torch/sentence_transformers/ProsusAI_finbert. Creating a new one with MEAN pooling.
+Some weights of the model checkpoint at /home/athekunal/.cache/torch/sentence_transformers/ProsusAI_finbert were not used when initializing BertModel: ['classifier.weight', 'classifier.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+{'Section_Names': ['RISK FACTORS', 'MARKET RISK DISCLOSURES', 'LEGAL PROCEEDINGS', 'UNRESOLVED STAFF COMMENTS', 'MINE SAFETY'], 'Tickers': ['AAPL'], 'Years': ['2021', '2022'], 'augmented_query': ['Compare the risk associated with Apple stock for the year 2021', 'Compare the risk associated with Apple stock for the year 2022']}
+Relevant documents for AAPL in the year 2021:
+Relevant documents for AAPL in the year 2022:
+[34m  Stopping...
+[34m  Stopping...
+[34m  Stopping...
+[34m  Stopping...
+Exception ignored in atexit callback: <bound method PersistentDuckDB.persist of <chromadb.db.duckdb.PersistentDuckDB object at 0x7f8892351720>>
+Traceback (most recent call last):
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/db/duckdb.py", line 473, in persist
+    self._conn.execute(
+RuntimeError: Query interrupted
+Exception ignored in atexit callback: <bound method PersistentDuckDB.persist of <chromadb.db.duckdb.PersistentDuckDB object at 0x7f885c996a10>>
+Traceback (most recent call last):
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/db/duckdb.py", line 473, in persist
+    self._conn.execute(
+RuntimeError: Query interrupted
+Exception ignored in atexit callback: <bound method PersistentDuckDB.persist of <chromadb.db.duckdb.PersistentDuckDB object at 0x7f88f5f9a830>>
+Traceback (most recent call last):
+  File "/home/athekunal/.local/lib/python3.10/site-packages/chromadb/db/duckdb.py", line 473, in persist
+    self._conn.execute(
+RuntimeError: Query interrupted

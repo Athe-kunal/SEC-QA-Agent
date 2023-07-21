@@ -1,0 +1,244 @@
+2023-07-21 00:15:01,169 INFO    StreamThr :5771 [internal.py:wandb_internal():86] W&B internal server running at pid: 5771, started at: 2023-07-21 00:15:01.169183
+2023-07-21 00:15:01,173 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: status
+2023-07-21 00:15:01,174 INFO    WriterThread:5771 [datastore.py:open_for_write():85] open: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/run-cfc9vnwd.wandb
+2023-07-21 00:15:01,175 DEBUG   SenderThread:5771 [sender.py:send():369] send: header
+2023-07-21 00:15:01,175 DEBUG   SenderThread:5771 [sender.py:send():369] send: run
+2023-07-21 00:15:01,688 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: check_version
+2023-07-21 00:15:01,689 INFO    SenderThread:5771 [dir_watcher.py:__init__():211] watching files in: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files
+2023-07-21 00:15:01,689 INFO    SenderThread:5771 [sender.py:_start_run_threads():1100] run started: cfc9vnwd with start time 1689923700.292525
+2023-07-21 00:15:01,689 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: summary_record
+2023-07-21 00:15:01,690 INFO    SenderThread:5771 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-21 00:15:01,690 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: check_version
+2023-07-21 00:15:01,864 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: run_start
+2023-07-21 00:15:01,877 DEBUG   HandlerThread:5771 [system_info.py:__init__():31] System info init
+2023-07-21 00:15:01,877 DEBUG   HandlerThread:5771 [system_info.py:__init__():46] System info init done
+2023-07-21 00:15:01,877 INFO    HandlerThread:5771 [system_monitor.py:start():181] Starting system monitor
+2023-07-21 00:15:01,877 INFO    SystemMonitor:5771 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-07-21 00:15:01,878 INFO    HandlerThread:5771 [system_monitor.py:probe():201] Collecting system info
+2023-07-21 00:15:01,878 INFO    SystemMonitor:5771 [interfaces.py:start():190] Started cpu monitoring
+2023-07-21 00:15:01,881 INFO    SystemMonitor:5771 [interfaces.py:start():190] Started disk monitoring
+2023-07-21 00:15:01,881 INFO    SystemMonitor:5771 [interfaces.py:start():190] Started gpu monitoring
+2023-07-21 00:15:01,883 INFO    SystemMonitor:5771 [interfaces.py:start():190] Started memory monitoring
+2023-07-21 00:15:01,884 INFO    SystemMonitor:5771 [interfaces.py:start():190] Started network monitoring
+2023-07-21 00:15:01,891 DEBUG   HandlerThread:5771 [system_info.py:probe():195] Probing system
+2023-07-21 00:15:01,892 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:01,892 DEBUG   HandlerThread:5771 [system_info.py:_probe_git():180] Probing git
+2023-07-21 00:15:01,900 DEBUG   HandlerThread:5771 [system_info.py:_probe_git():188] Probing git done
+2023-07-21 00:15:01,900 DEBUG   HandlerThread:5771 [system_info.py:probe():240] Probing system done
+2023-07-21 00:15:01,900 DEBUG   HandlerThread:5771 [system_monitor.py:probe():210] {'os': 'Linux-5.15.90.1-microsoft-standard-WSL2-x86_64-with-glibc2.35', 'python': '3.10.6', 'heartbeatAt': '2023-07-21T07:15:01.891545', 'startedAt': '2023-07-21T07:15:00.271347', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/athekunal/SEC-Project/SEC-QA-Agent/streamlit.py', 'codePath': 'streamlit.py', 'git': {'remote': 'https://github.com/Athe-kunal/SEC-QA-Agent.git', 'commit': '2cd25323dbc4183a3f3d6ce8b2735e2115344fcd'}, 'email': 'athekunal@gmail.com', 'root': '/home/athekunal/SEC-Project/SEC-QA-Agent', 'host': 'LAPTOP-QF1FUNPH', 'username': 'athekunal', 'executable': '/usr/bin/python3', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 1896.3879999999992, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 1006.853931427002, 'used': 13.673412322998047}, 'gpu': 'NVIDIA GeForce RTX 3050 Ti Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3050 Ti Laptop GPU', 'memory_total': 4294967296}], 'memory': {'total': 7.439723968505859}}
+2023-07-21 00:15:01,901 INFO    HandlerThread:5771 [system_monitor.py:probe():211] Finished collecting system info
+2023-07-21 00:15:01,901 INFO    HandlerThread:5771 [system_monitor.py:probe():214] Publishing system info
+2023-07-21 00:15:01,901 DEBUG   HandlerThread:5771 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-07-21 00:15:01,901 DEBUG   HandlerThread:5771 [system_info.py:_save_pip():67] Saving pip packages done
+2023-07-21 00:15:01,903 INFO    HandlerThread:5771 [system_monitor.py:probe():216] Finished publishing system info
+2023-07-21 00:15:01,903 DEBUG   SenderThread:5771 [sender.py:send():369] send: files
+2023-07-21 00:15:01,904 INFO    SenderThread:5771 [sender.py:_save_file():1354] saving file wandb-metadata.json with policy now
+2023-07-21 00:15:01,918 DEBUG   SenderThread:5771 [sender.py:send():369] send: telemetry
+2023-07-21 00:15:01,919 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-21 00:15:01,919 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: stop_status
+2023-07-21 00:15:02,212 DEBUG   SenderThread:5771 [sender.py:send():369] send: telemetry
+2023-07-21 00:15:02,486 INFO    wandb-upload_0:5771 [upload_job.py:push():133] Uploaded file /tmp/tmp9m5lsec8wandb/jqf007r6-wandb-metadata.json
+2023-07-21 00:15:02,691 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/wandb-metadata.json
+2023-07-21 00:15:02,691 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/requirements.txt
+2023-07-21 00:15:02,692 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/wandb-summary.json
+2023-07-21 00:15:03,690 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/output.log
+2023-07-21 00:15:03,900 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:05,691 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/output.log
+2023-07-21 00:15:06,392 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2023-07-21 00:15:06,393 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2023-07-21 00:15:07,030 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: status_report
+2023-07-21 00:15:07,692 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/output.log
+2023-07-21 00:15:08,400 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:10,407 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:12,035 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: status_report
+2023-07-21 00:15:12,414 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:13,923 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: log_artifact
+2023-07-21 00:15:13,923 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: log_artifact
+2023-07-21 00:15:13,940 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-21 00:15:14,424 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:14,698 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/media/table/stats_0_5b7f1ae47df5d11b30bb.table.json
+2023-07-21 00:15:14,699 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/media
+2023-07-21 00:15:14,699 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/media/table
+2023-07-21 00:15:15,104 INFO    wandb-upload_1:5771 [upload_job.py:push():133] Uploaded file /tmp/tmp9m5lsec8wandb/dgg209ux-media/table/stats_0_5b7f1ae47df5d11b30bb.table.json
+2023-07-21 00:15:15,305 INFO    wandb-upload_0:5771 [upload_job.py:push():91] Uploaded file /home/athekunal/.local/share/wandb/artifacts/staging/tmpi_c4l8_d
+2023-07-21 00:15:16,008 INFO    SenderThread:5771 [sender.py:send_request_log_artifact():1414] logged artifact run-cfc9vnwd-stats - {'id': 'QXJ0aWZhY3Q6NTE4NTkwOTcw', 'digest': 'd3e78877647360816670761d792f3e6f', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjg0NzA4Mjc0', 'latestArtifact': None}, 'version': 'latest'}
+2023-07-21 00:15:16,009 DEBUG   SenderThread:5771 [sender.py:send():369] send: files
+2023-07-21 00:15:16,009 INFO    SenderThread:5771 [sender.py:_save_file():1354] saving file media/table/stats_0_5b7f1ae47df5d11b30bb.table.json with policy now
+2023-07-21 00:15:16,010 DEBUG   SenderThread:5771 [sender.py:send():369] send: history
+2023-07-21 00:15:16,013 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: summary_record
+2023-07-21 00:15:16,025 INFO    SenderThread:5771 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-21 00:15:16,435 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:16,539 INFO    wandb-upload_1:5771 [upload_job.py:push():133] Uploaded file /tmp/tmp9m5lsec8wandb/e1ndr0ot-media/table/stats_0_5b7f1ae47df5d11b30bb.table.json
+2023-07-21 00:15:16,706 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/wandb-summary.json
+2023-07-21 00:15:16,926 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-21 00:15:16,932 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: stop_status
+2023-07-21 00:15:17,071 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: status_report
+2023-07-21 00:15:18,932 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2023-07-21 00:15:18,932 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2023-07-21 00:15:20,708 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/output.log
+2023-07-21 00:15:20,939 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:21,075 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: log_artifact
+2023-07-21 00:15:21,076 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: log_artifact
+2023-07-21 00:15:21,098 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: partial_history
+2023-07-21 00:15:21,714 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/media/table/stats_1_d41eaf6570d03616d3e4.table.json
+2023-07-21 00:15:21,715 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/media/table
+2023-07-21 00:15:22,053 INFO    wandb-upload_1:5771 [upload_job.py:push():133] Uploaded file /tmp/tmp9m5lsec8wandb/uxupsdqz-media/table/stats_1_d41eaf6570d03616d3e4.table.json
+2023-07-21 00:15:22,140 INFO    wandb-upload_0:5771 [upload_job.py:push():91] Uploaded file /home/athekunal/.local/share/wandb/artifacts/staging/tmpikfe7p_6
+2023-07-21 00:15:22,948 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:22,952 INFO    SenderThread:5771 [sender.py:send_request_log_artifact():1414] logged artifact run-cfc9vnwd-stats - {'id': 'QXJ0aWZhY3Q6NTE4NTkxMDI5', 'digest': '03299b9c2c7ae748d74da8386c07e575', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjg0NzA4Mjc0', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NTE4NTkwOTcw', 'versionIndex': 0}}, 'version': 'latest'}
+2023-07-21 00:15:22,952 DEBUG   SenderThread:5771 [sender.py:send():369] send: files
+2023-07-21 00:15:22,952 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: status_report
+2023-07-21 00:15:22,953 INFO    SenderThread:5771 [sender.py:_save_file():1354] saving file media/table/stats_1_d41eaf6570d03616d3e4.table.json with policy now
+2023-07-21 00:15:22,954 DEBUG   SenderThread:5771 [sender.py:send():369] send: history
+2023-07-21 00:15:22,955 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: summary_record
+2023-07-21 00:15:22,958 INFO    SenderThread:5771 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-21 00:15:23,603 INFO    wandb-upload_1:5771 [upload_job.py:push():133] Uploaded file /tmp/tmp9m5lsec8wandb/hzopcwzb-media/table/stats_1_d41eaf6570d03616d3e4.table.json
+2023-07-21 00:15:23,716 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/wandb-summary.json
+2023-07-21 00:15:24,958 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:26,965 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:27,960 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: status_report
+2023-07-21 00:15:28,972 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:31,477 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2023-07-21 00:15:31,477 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2023-07-21 00:15:31,920 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-21 00:15:31,921 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: stop_status
+2023-07-21 00:15:33,019 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: status_report
+2023-07-21 00:15:33,524 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:33,727 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/config.yaml
+2023-07-21 00:15:35,531 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:37,539 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:38,173 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: status_report
+2023-07-21 00:15:39,546 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:41,554 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:43,175 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: status_report
+2023-07-21 00:15:44,046 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2023-07-21 00:15:44,047 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2023-07-21 00:15:46,055 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:46,921 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-21 00:15:46,922 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: stop_status
+2023-07-21 00:15:48,062 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:49,032 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: status_report
+2023-07-21 00:15:50,070 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:52,076 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:54,035 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: status_report
+2023-07-21 00:15:54,083 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:56,577 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2023-07-21 00:15:56,578 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2023-07-21 00:15:58,586 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:15:59,038 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: status_report
+2023-07-21 00:16:00,594 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:16:01,885 DEBUG   SystemMonitor:5771 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-07-21 00:16:01,887 DEBUG   SenderThread:5771 [sender.py:send():369] send: stats
+2023-07-21 00:16:01,921 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-21 00:16:01,921 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: stop_status
+2023-07-21 00:16:02,600 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:16:04,623 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:16:05,001 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: status_report
+2023-07-21 00:16:06,631 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:16:09,125 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2023-07-21 00:16:09,126 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2023-07-21 00:16:10,004 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: status_report
+2023-07-21 00:16:11,132 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:16:13,140 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:16:15,004 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: status_report
+2023-07-21 00:16:15,147 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:16:16,921 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-21 00:16:16,922 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: stop_status
+2023-07-21 00:16:17,153 ERROR   gpu       :5771 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-21 00:16:18,511 DEBUG   SenderThread:5771 [sender.py:send():369] send: exit
+2023-07-21 00:16:18,511 INFO    SenderThread:5771 [sender.py:send_exit():574] handling exit code: 0
+2023-07-21 00:16:18,511 INFO    SenderThread:5771 [sender.py:send_exit():576] handling runtime: 76
+2023-07-21 00:16:18,512 INFO    SenderThread:5771 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-21 00:16:18,513 INFO    SenderThread:5771 [sender.py:send_exit():582] send defer
+2023-07-21 00:16:18,513 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: defer
+2023-07-21 00:16:18,513 INFO    HandlerThread:5771 [handler.py:handle_request_defer():170] handle defer: 0
+2023-07-21 00:16:18,514 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: defer
+2023-07-21 00:16:18,514 INFO    SenderThread:5771 [sender.py:send_request_defer():598] handle sender defer: 0
+2023-07-21 00:16:18,514 INFO    SenderThread:5771 [sender.py:transition_state():602] send defer: 1
+2023-07-21 00:16:18,514 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: defer
+2023-07-21 00:16:18,514 INFO    HandlerThread:5771 [handler.py:handle_request_defer():170] handle defer: 1
+2023-07-21 00:16:18,515 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: defer
+2023-07-21 00:16:18,515 INFO    SenderThread:5771 [sender.py:send_request_defer():598] handle sender defer: 1
+2023-07-21 00:16:18,515 INFO    SenderThread:5771 [sender.py:transition_state():602] send defer: 2
+2023-07-21 00:16:18,515 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: defer
+2023-07-21 00:16:18,516 INFO    HandlerThread:5771 [handler.py:handle_request_defer():170] handle defer: 2
+2023-07-21 00:16:18,516 INFO    HandlerThread:5771 [system_monitor.py:finish():190] Stopping system monitor
+2023-07-21 00:16:18,517 DEBUG   SystemMonitor:5771 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-07-21 00:16:18,518 DEBUG   SystemMonitor:5771 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-07-21 00:16:18,519 INFO    HandlerThread:5771 [interfaces.py:finish():202] Joined cpu monitor
+2023-07-21 00:16:18,521 INFO    HandlerThread:5771 [interfaces.py:finish():202] Joined disk monitor
+2023-07-21 00:16:18,550 INFO    HandlerThread:5771 [interfaces.py:finish():202] Joined gpu monitor
+2023-07-21 00:16:18,551 INFO    HandlerThread:5771 [interfaces.py:finish():202] Joined memory monitor
+2023-07-21 00:16:18,551 INFO    HandlerThread:5771 [interfaces.py:finish():202] Joined network monitor
+2023-07-21 00:16:18,552 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: defer
+2023-07-21 00:16:18,552 INFO    SenderThread:5771 [sender.py:send_request_defer():598] handle sender defer: 2
+2023-07-21 00:16:18,553 INFO    SenderThread:5771 [sender.py:transition_state():602] send defer: 3
+2023-07-21 00:16:18,553 DEBUG   SenderThread:5771 [sender.py:send():369] send: stats
+2023-07-21 00:16:18,553 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: defer
+2023-07-21 00:16:18,554 INFO    HandlerThread:5771 [handler.py:handle_request_defer():170] handle defer: 3
+2023-07-21 00:16:18,555 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: defer
+2023-07-21 00:16:18,555 INFO    SenderThread:5771 [sender.py:send_request_defer():598] handle sender defer: 3
+2023-07-21 00:16:18,555 INFO    SenderThread:5771 [sender.py:transition_state():602] send defer: 4
+2023-07-21 00:16:18,555 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: defer
+2023-07-21 00:16:18,555 INFO    HandlerThread:5771 [handler.py:handle_request_defer():170] handle defer: 4
+2023-07-21 00:16:18,556 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: defer
+2023-07-21 00:16:18,556 INFO    SenderThread:5771 [sender.py:send_request_defer():598] handle sender defer: 4
+2023-07-21 00:16:18,556 INFO    SenderThread:5771 [sender.py:transition_state():602] send defer: 5
+2023-07-21 00:16:18,556 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: defer
+2023-07-21 00:16:18,557 INFO    HandlerThread:5771 [handler.py:handle_request_defer():170] handle defer: 5
+2023-07-21 00:16:18,561 DEBUG   SenderThread:5771 [sender.py:send():369] send: summary
+2023-07-21 00:16:18,562 INFO    SenderThread:5771 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-21 00:16:18,562 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: defer
+2023-07-21 00:16:18,563 INFO    SenderThread:5771 [sender.py:send_request_defer():598] handle sender defer: 5
+2023-07-21 00:16:18,563 INFO    SenderThread:5771 [sender.py:transition_state():602] send defer: 6
+2023-07-21 00:16:18,563 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: defer
+2023-07-21 00:16:18,563 INFO    HandlerThread:5771 [handler.py:handle_request_defer():170] handle defer: 6
+2023-07-21 00:16:18,564 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: defer
+2023-07-21 00:16:18,564 INFO    SenderThread:5771 [sender.py:send_request_defer():598] handle sender defer: 6
+2023-07-21 00:16:18,564 INFO    SenderThread:5771 [sender.py:transition_state():602] send defer: 7
+2023-07-21 00:16:18,564 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: status_report
+2023-07-21 00:16:18,565 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: defer
+2023-07-21 00:16:18,565 INFO    HandlerThread:5771 [handler.py:handle_request_defer():170] handle defer: 7
+2023-07-21 00:16:18,566 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: defer
+2023-07-21 00:16:18,566 INFO    SenderThread:5771 [sender.py:send_request_defer():598] handle sender defer: 7
+2023-07-21 00:16:18,769 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/output.log
+2023-07-21 00:16:18,770 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/wandb-summary.json
+2023-07-21 00:16:19,511 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: poll_exit
+2023-07-21 00:16:19,769 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/output.log
+2023-07-21 00:16:20,770 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/output.log
+2023-07-21 00:16:21,771 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/output.log
+2023-07-21 00:16:21,877 INFO    SenderThread:5771 [sender.py:transition_state():602] send defer: 8
+2023-07-21 00:16:21,878 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: poll_exit
+2023-07-21 00:16:21,878 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: defer
+2023-07-21 00:16:21,878 INFO    HandlerThread:5771 [handler.py:handle_request_defer():170] handle defer: 8
+2023-07-21 00:16:21,879 DEBUG   SenderThread:5771 [sender.py:send_request():396] send_request: defer
+2023-07-21 00:16:21,879 INFO    SenderThread:5771 [sender.py:send_request_defer():598] handle sender defer: 8
+2023-07-21 00:16:21,879 INFO    SenderThread:5771 [job_builder.py:build():240] Attempting to build job artifact
+2023-07-21 00:16:21,879 INFO    SenderThread:5771 [job_builder.py:build():264] is repo sourced job
+2023-07-21 00:16:21,881 INFO    SenderThread:5771 [job_builder.py:build():305] adding wandb-job metadata file
+2023-07-21 00:16:21,887 INFO    SenderThread:5771 [sender.py:transition_state():602] send defer: 9
+2023-07-21 00:16:21,888 DEBUG   HandlerThread:5771 [handler.py:handle_request():144] handle_request: defer
+2023-07-21 00:16:21,888 INFO    HandlerThread:5771 [handler.py:handle_request_defer():170] handle defer: 9
+2023-07-21 00:16:21,889 DEBUG   SenderThread:5771 [sender.py:send():369] send: artifact
+2023-07-21 00:16:22,274 WARNING StreamThr :5771 [internal.py:is_dead():414] Internal process exiting, parent pid 5704 disappeared
+2023-07-21 00:16:22,275 ERROR   StreamThr :5771 [internal.py:wandb_internal():152] Internal process shutdown.
+2023-07-21 00:16:22,343 INFO    SenderThread:5771 [sender.py:send_artifact():1450] sent artifact job-https___github.com_Athe-kunal_SEC-QA-Agent.git_streamlit.py - {'id': 'QXJ0aWZhY3Q6NTE4NTYwMzE2', 'digest': '6f878de51db22a2ecd85f80f7623e1f4', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_Athe-kunal_SEC-QA-Agent.git_streamlit.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_Athe-kunal_SEC-QA-Agent.git_streamlit.py', 'alias': 'v2'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjgzMzA0MTc4', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NTE4NTY3NDky', 'versionIndex': 3}}, 'version': 'v2'}
+2023-07-21 00:16:22,343 INFO    SenderThread:5771 [sender.py:finish():1526] shutting down sender
+2023-07-21 00:16:22,343 INFO    SenderThread:5771 [dir_watcher.py:finish():359] shutting down directory watcher
+2023-07-21 00:16:22,772 INFO    Thread-61 :5771 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/output.log
+2023-07-21 00:16:22,773 INFO    SenderThread:5771 [dir_watcher.py:finish():389] scan: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files
+2023-07-21 00:16:22,773 INFO    SenderThread:5771 [dir_watcher.py:finish():403] scan save: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/output.log output.log
+2023-07-21 00:16:22,774 INFO    SenderThread:5771 [dir_watcher.py:finish():403] scan save: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/requirements.txt requirements.txt
+2023-07-21 00:16:22,774 INFO    SenderThread:5771 [dir_watcher.py:finish():403] scan save: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/config.yaml config.yaml
+2023-07-21 00:16:22,775 INFO    SenderThread:5771 [dir_watcher.py:finish():403] scan save: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/wandb-metadata.json wandb-metadata.json
+2023-07-21 00:16:22,775 INFO    SenderThread:5771 [dir_watcher.py:finish():403] scan save: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/wandb-summary.json wandb-summary.json
+2023-07-21 00:16:22,787 INFO    SenderThread:5771 [dir_watcher.py:finish():403] scan save: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/media/table/stats_1_d41eaf6570d03616d3e4.table.json media/table/stats_1_d41eaf6570d03616d3e4.table.json
+2023-07-21 00:16:22,793 INFO    SenderThread:5771 [dir_watcher.py:finish():403] scan save: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/media/table/stats_0_5b7f1ae47df5d11b30bb.table.json media/table/stats_0_5b7f1ae47df5d11b30bb.table.json
+2023-07-21 00:16:22,798 INFO    SenderThread:5771 [file_pusher.py:finish():159] shutting down file pusher
+2023-07-21 00:16:22,799 INFO    SenderThread:5771 [file_pusher.py:join():164] waiting for file pusher
+2023-07-21 00:16:22,889 INFO    HandlerThread:5771 [handler.py:finish():854] shutting down handler
+2023-07-21 00:16:22,892 INFO    WriterThread:5771 [datastore.py:close():298] close: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/run-cfc9vnwd.wandb
+2023-07-21 00:16:23,150 INFO    wandb-upload_2:5771 [upload_job.py:push():133] Uploaded file /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/output.log
+2023-07-21 00:16:23,445 INFO    wandb-upload_3:5771 [upload_job.py:push():133] Uploaded file /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/config.yaml
+2023-07-21 00:16:23,600 INFO    wandb-upload_1:5771 [upload_job.py:push():133] Uploaded file /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/wandb-summary.json
+2023-07-21 00:16:23,651 INFO    wandb-upload_0:5771 [upload_job.py:push():133] Uploaded file /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230721_001500-cfc9vnwd/files/requirements.txt
