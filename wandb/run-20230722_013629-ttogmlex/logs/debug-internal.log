@@ -1,0 +1,19 @@
+2023-07-22 01:36:29,775 INFO    StreamThr :66617 [internal.py:wandb_internal():86] W&B internal server running at pid: 66617, started at: 2023-07-22 01:36:29.774726
+2023-07-22 01:36:29,777 DEBUG   HandlerThread:66617 [handler.py:handle_request():144] handle_request: status
+2023-07-22 01:36:29,780 INFO    WriterThread:66617 [datastore.py:open_for_write():85] open: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230722_013629-ttogmlex/run-ttogmlex.wandb
+2023-07-22 01:36:29,781 DEBUG   SenderThread:66617 [sender.py:send():369] send: header
+2023-07-22 01:36:29,781 DEBUG   SenderThread:66617 [sender.py:send():369] send: run
+2023-07-22 01:36:30,181 INFO    SenderThread:66617 [dir_watcher.py:__init__():211] watching files in: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230722_013629-ttogmlex/files
+2023-07-22 01:36:30,182 INFO    SenderThread:66617 [sender.py:_start_run_threads():1100] run started: ttogmlex with start time 1690014989.772966
+2023-07-22 01:36:30,780 WARNING StreamThr :66617 [internal.py:is_dead():414] Internal process exiting, parent pid 66563 disappeared
+2023-07-22 01:36:30,780 ERROR   StreamThr :66617 [internal.py:wandb_internal():152] Internal process shutdown.
+2023-07-22 01:36:30,782 INFO    WriterThread:66617 [datastore.py:close():298] close: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230722_013629-ttogmlex/run-ttogmlex.wandb
+2023-07-22 01:36:30,800 INFO    HandlerThread:66617 [handler.py:finish():854] shutting down handler
+2023-07-22 01:36:31,185 INFO    SenderThread:66617 [sender.py:finish():1526] shutting down sender
+2023-07-22 01:36:31,185 INFO    SenderThread:66617 [dir_watcher.py:finish():359] shutting down directory watcher
+2023-07-22 01:36:32,195 INFO    SenderThread:66617 [dir_watcher.py:finish():389] scan: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230722_013629-ttogmlex/files
+2023-07-22 01:36:32,195 INFO    SenderThread:66617 [dir_watcher.py:finish():403] scan save: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230722_013629-ttogmlex/files/config.yaml config.yaml
+2023-07-22 01:36:32,196 INFO    SenderThread:66617 [file_pusher.py:finish():159] shutting down file pusher
+2023-07-22 01:36:32,196 INFO    SenderThread:66617 [file_pusher.py:join():164] waiting for file pusher
+2023-07-22 01:36:32,726 INFO    wandb-upload_0:66617 [upload_job.py:push():133] Uploaded file /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230722_013629-ttogmlex/files/config.yaml
+2023-07-22 01:36:32,819 INFO    MainThread:66617 [internal.py:handle_exit():76] Internal process exited

@@ -1,0 +1,15 @@
+No sentence-transformers model found with name /home/athekunal/.cache/torch/sentence_transformers/ProsusAI_finbert. Creating a new one with MEAN pooling.
+Some weights of the model checkpoint at /home/athekunal/.cache/torch/sentence_transformers/ProsusAI_finbert were not used when initializing BertModel: ['classifier.bias', 'classifier.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[32mINFO[39m:     Started server process [[36m78065[39m]
+[32mINFO[39m:     Waiting for application startup.
+[32mINFO[39m:     Application startup complete.
+[32mINFO[39m:     127.0.0.1:54490 - "[1mGET /docs HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:54490 - "[1mGET /openapi.json HTTP/1.1[22m" [32m200 OK
+{'Section_Names': ['RISK_FACTORS'], 'Tickers': ['AAPL'], 'Years': ['2022'], 'user_query': 'What are the risk factors for Apple for the year 2022?'}
+[32mINFO[39m:     127.0.0.1:54494 - "[1mGET /llm2/%7Bllm1_dict%7D?llm1_str=%7B%20%20%20%22Section_Names%22%3A%20%5B%20%20%20%20%20%22RISK_FACTORS%22%20%20%20%5D%2C%20%20%20%22Tickers%22%3A%20%5B%20%20%20%20%20%22AAPL%22%20%20%20%5D%2C%20%20%20%22Years%22%3A%20%5B%20%20%20%20%20%222022%22%20%20%20%5D%2C%20%20%20%22user_query%22%3A%20%22What%20are%20the%20risk%20factors%20for%20Apple%20for%20the%20year%202022%3F%22%20%7D HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     Shutting down
+[32mINFO[39m:     Waiting for application shutdown.
+[32mINFO[39m:     Application shutdown complete.
+[32mINFO[39m:     Finished server process [[36m78065[39m]

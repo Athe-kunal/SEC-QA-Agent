@@ -148,7 +148,10 @@ def get_relevant_dict_with_mmr(
                 }
                 for elem in list(itertools.product([tic], [yr], section_names))
             ]
-            where_clause = {"$or": individual_metadata}
+            if len(individual_metadata)==1:
+                where_clause=individual_metadata[0]
+            else:
+                where_clause = {"$or": individual_metadata}
             query_results = restore_collection.query(
                 query_texts=user_query,
                 n_results=20,

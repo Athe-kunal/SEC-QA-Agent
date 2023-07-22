@@ -1,0 +1,60 @@
+2023-07-22 02:16:21,753 INFO    StreamThr :81841 [internal.py:wandb_internal():86] W&B internal server running at pid: 81841, started at: 2023-07-22 02:16:21.752957
+2023-07-22 02:16:21,755 DEBUG   HandlerThread:81841 [handler.py:handle_request():144] handle_request: status
+2023-07-22 02:16:21,757 INFO    WriterThread:81841 [datastore.py:open_for_write():85] open: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230722_021621-r6i0mxif/run-r6i0mxif.wandb
+2023-07-22 02:16:21,757 DEBUG   SenderThread:81841 [sender.py:send():369] send: header
+2023-07-22 02:16:21,757 DEBUG   SenderThread:81841 [sender.py:send():369] send: run
+2023-07-22 02:16:22,134 INFO    SenderThread:81841 [dir_watcher.py:__init__():211] watching files in: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230722_021621-r6i0mxif/files
+2023-07-22 02:16:22,134 INFO    SenderThread:81841 [sender.py:_start_run_threads():1100] run started: r6i0mxif with start time 1690017381.751013
+2023-07-22 02:16:22,134 DEBUG   SenderThread:81841 [sender.py:send_request():396] send_request: summary_record
+2023-07-22 02:16:22,135 INFO    SenderThread:81841 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2023-07-22 02:16:22,138 DEBUG   HandlerThread:81841 [handler.py:handle_request():144] handle_request: check_version
+2023-07-22 02:16:22,138 DEBUG   SenderThread:81841 [sender.py:send_request():396] send_request: check_version
+2023-07-22 02:16:22,286 DEBUG   HandlerThread:81841 [handler.py:handle_request():144] handle_request: run_start
+2023-07-22 02:16:22,296 DEBUG   HandlerThread:81841 [system_info.py:__init__():31] System info init
+2023-07-22 02:16:22,296 DEBUG   HandlerThread:81841 [system_info.py:__init__():46] System info init done
+2023-07-22 02:16:22,297 INFO    HandlerThread:81841 [system_monitor.py:start():181] Starting system monitor
+2023-07-22 02:16:22,297 INFO    SystemMonitor:81841 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-07-22 02:16:22,297 INFO    HandlerThread:81841 [system_monitor.py:probe():201] Collecting system info
+2023-07-22 02:16:22,298 INFO    SystemMonitor:81841 [interfaces.py:start():190] Started cpu monitoring
+2023-07-22 02:16:22,300 INFO    SystemMonitor:81841 [interfaces.py:start():190] Started disk monitoring
+2023-07-22 02:16:22,301 INFO    SystemMonitor:81841 [interfaces.py:start():190] Started gpu monitoring
+2023-07-22 02:16:22,302 INFO    SystemMonitor:81841 [interfaces.py:start():190] Started memory monitoring
+2023-07-22 02:16:22,302 INFO    SystemMonitor:81841 [interfaces.py:start():190] Started network monitoring
+2023-07-22 02:16:22,311 DEBUG   HandlerThread:81841 [system_info.py:probe():195] Probing system
+2023-07-22 02:16:22,315 ERROR   gpu       :81841 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-22 02:16:22,361 DEBUG   HandlerThread:81841 [system_info.py:_probe_git():180] Probing git
+2023-07-22 02:16:22,364 DEBUG   HandlerThread:81841 [system_info.py:_probe_git():188] Probing git done
+2023-07-22 02:16:22,364 DEBUG   HandlerThread:81841 [system_info.py:probe():240] Probing system done
+2023-07-22 02:16:22,364 DEBUG   HandlerThread:81841 [system_monitor.py:probe():210] {'os': 'Linux-5.15.90.1-microsoft-standard-WSL2-x86_64-with-glibc2.35', 'python': '3.10.6', 'heartbeatAt': '2023-07-22T09:16:22.311665', 'startedAt': '2023-07-22T09:16:21.746652', 'docker': None, 'cuda': None, 'args': ('fastapi_main:app', '--reload'), 'state': 'running', 'program': '/home/athekunal/.local/bin/uvicorn', 'git': {'remote': 'https://github.com/Athe-kunal/SEC-QA-Agent.git', 'commit': '4c203a2bb18d5840393ee2e943d4f30d036e5243'}, 'email': 'athekunal@gmail.com', 'root': '/home/athekunal/SEC-Project/SEC-QA-Agent', 'host': 'LAPTOP-QF1FUNPH', 'username': 'athekunal', 'executable': '/usr/bin/python3', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 1896.3879999999992, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}, {'current': 1896.388, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 1006.853931427002, 'used': 14.076663970947266}, 'gpu': 'NVIDIA GeForce RTX 3050 Ti Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3050 Ti Laptop GPU', 'memory_total': 4294967296}], 'memory': {'total': 7.439723968505859}}
+2023-07-22 02:16:22,364 INFO    HandlerThread:81841 [system_monitor.py:probe():211] Finished collecting system info
+2023-07-22 02:16:22,364 INFO    HandlerThread:81841 [system_monitor.py:probe():214] Publishing system info
+2023-07-22 02:16:22,364 DEBUG   HandlerThread:81841 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-07-22 02:16:22,365 DEBUG   HandlerThread:81841 [system_info.py:_save_pip():67] Saving pip packages done
+2023-07-22 02:16:22,365 INFO    HandlerThread:81841 [system_monitor.py:probe():216] Finished publishing system info
+2023-07-22 02:16:22,366 DEBUG   SenderThread:81841 [sender.py:send():369] send: files
+2023-07-22 02:16:22,367 INFO    SenderThread:81841 [sender.py:_save_file():1354] saving file wandb-metadata.json with policy now
+2023-07-22 02:16:22,372 DEBUG   SenderThread:81841 [sender.py:send():369] send: telemetry
+2023-07-22 02:16:22,416 DEBUG   HandlerThread:81841 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-22 02:16:22,417 DEBUG   SenderThread:81841 [sender.py:send_request():396] send_request: stop_status
+2023-07-22 02:16:22,675 DEBUG   SenderThread:81841 [sender.py:send():369] send: telemetry
+2023-07-22 02:16:22,687 DEBUG   SenderThread:81841 [sender.py:send():369] send: telemetry
+2023-07-22 02:16:22,815 INFO    wandb-upload_0:81841 [upload_job.py:push():133] Uploaded file /tmp/tmpoxxjk5fhwandb/p2szggyy-wandb-metadata.json
+2023-07-22 02:16:23,136 INFO    Thread-12 :81841 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230722_021621-r6i0mxif/files/requirements.txt
+2023-07-22 02:16:23,136 INFO    Thread-12 :81841 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230722_021621-r6i0mxif/files/wandb-metadata.json
+2023-07-22 02:16:23,137 INFO    Thread-12 :81841 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230722_021621-r6i0mxif/files/wandb-summary.json
+2023-07-22 02:16:23,665 DEBUG   SenderThread:81841 [sender.py:send():369] send: telemetry
+2023-07-22 02:16:24,159 DEBUG   SenderThread:81841 [sender.py:send():369] send: telemetry
+2023-07-22 02:16:24,166 DEBUG   SenderThread:81841 [sender.py:send():369] send: telemetry
+2023-07-22 02:16:24,273 DEBUG   SenderThread:81841 [sender.py:send():369] send: telemetry
+2023-07-22 02:16:24,323 ERROR   gpu       :81841 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-22 02:16:24,324 DEBUG   SenderThread:81841 [sender.py:send():369] send: telemetry
+2023-07-22 02:16:24,406 DEBUG   SenderThread:81841 [sender.py:send():369] send: telemetry
+2023-07-22 02:16:26,156 INFO    Thread-12 :81841 [dir_watcher.py:_on_file_created():272] file/dir created: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230722_021621-r6i0mxif/files/output.log
+2023-07-22 02:16:26,306 INFO    memory    :81841 [interfaces.py:monitor():140] Process proc.memory.rssMB has exited.
+2023-07-22 02:16:26,307 DEBUG   SystemMonitor:81841 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-07-22 02:16:26,307 DEBUG   SystemMonitor:81841 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-07-22 02:16:26,307 DEBUG   SystemMonitor:81841 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-07-22 02:16:26,308 DEBUG   SenderThread:81841 [sender.py:send():369] send: stats
+2023-07-22 02:16:27,309 DEBUG   HandlerThread:81841 [handler.py:handle_request():144] handle_request: status_report
+2023-07-22 02:16:28,161 INFO    Thread-12 :81841 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/athekunal/SEC-Project/SEC-QA-Agent/wandb/run-20230722_021621-r6i0mxif/files/output.log
+2023-07-22 02:16:28,317 INFO    MainThread:81841 [internal.py:handle_exit():76] Internal process exited

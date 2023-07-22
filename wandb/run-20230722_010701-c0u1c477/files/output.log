@@ -1,0 +1,120 @@
+
+No sentence-transformers model found with name /home/athekunal/.cache/torch/sentence_transformers/ProsusAI_finbert. Creating a new one with MEAN pooling.
+Some weights of the model checkpoint at /home/athekunal/.cache/torch/sentence_transformers/ProsusAI_finbert were not used when initializing BertModel: ['classifier.bias', 'classifier.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[32mINFO[39m:     Started server process [[36m57221[39m]
+[32mINFO[39m:     Waiting for application startup.
+[32mINFO[39m:     Application startup complete.
+[32mINFO[39m:     127.0.0.1:36410 - "[1mGET / HTTP/1.1[22m" [31m422 Unprocessable Entity
+[32mINFO[39m:     127.0.0.1:36410 - "[1mGET /favicon.ico HTTP/1.1[22m" [31m404 Not Found
+[32mINFO[39m:     127.0.0.1:36408 - "[1mGET /docs HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:36408 - "[1mGET /openapi.json HTTP/1.1[22m" [32m200 OK
+[31mERROR[39m:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/athekunal/.local/lib/python3.10/site-packages/uvicorn/protocols/http/httptools_impl.py", line 435, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/home/athekunal/.local/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/fastapi/applications.py", line 282, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/athekunal/.local/lib/python3.10/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/athekunal/.local/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/home/athekunal/.local/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/fastapi/routing.py", line 241, in app
+    raw_response = await run_endpoint_function(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/fastapi/routing.py", line 169, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/anyio/to_thread.py", line 33, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 877, in run_sync_in_worker_thread
+    return await future
+  File "/home/athekunal/.local/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 807, in run
+    result = context.run(func, *args)
+  File "/home/athekunal/SEC-Project/SEC-QA-Agent/fastapi_main.py", line 33, in user_query
+    llm1_output_dict = get_response_llm1(USER_REQUEST, "10-K")
+  File "/home/athekunal/SEC-Project/SEC-QA-Agent/LLM1.py", line 80, in get_response_llm1
+    llm1 = OpenAI(temperature=0.0)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/langchain/load/serializable.py", line 74, in __init__
+    super().__init__(**kwargs)
+  File "pydantic/main.py", line 341, in pydantic.main.BaseModel.__init__
+pydantic.error_wrappers.ValidationError: 1 validation error for OpenAI
+__root__
+  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass  `openai_api_key` as a named parameter. (type=value_error)
+[32mINFO[39m:     127.0.0.1:58676 - "[1mGET /?USER_REQUEST=What%20are%20the%20risk%20factors%20for%20Apple%20for%20the%20year%202022%3F HTTP/1.1[22m" [91m500 Internal Server Error
+[32mINFO[39m:     127.0.0.1:35178 - "[1mGET /docs HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:35178 - "[1mGET /openapi.json HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:35184 - "[1mGET /?USER_REQUEST=What%20are%20the%20risk%20factors%20for%20Google%20for%20the%20year%202022%3F HTTP/1.1[22m" [91m500 Internal Server Error
+[31mERROR[39m:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/athekunal/.local/lib/python3.10/site-packages/uvicorn/protocols/http/httptools_impl.py", line 435, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/home/athekunal/.local/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/fastapi/applications.py", line 282, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/starlette/applications.py", line 122, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/home/athekunal/.local/lib/python3.10/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 79, in __call__
+    raise exc
+  File "/home/athekunal/.local/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 20, in __call__
+    raise e
+  File "/home/athekunal/.local/lib/python3.10/site-packages/fastapi/middleware/asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/starlette/routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/starlette/routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/starlette/routing.py", line 66, in app
+    response = await func(request)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/fastapi/routing.py", line 241, in app
+    raw_response = await run_endpoint_function(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/fastapi/routing.py", line 169, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/anyio/to_thread.py", line 33, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(
+  File "/home/athekunal/.local/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 877, in run_sync_in_worker_thread
+    return await future
+  File "/home/athekunal/.local/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 807, in run
+    result = context.run(func, *args)
+  File "/home/athekunal/SEC-Project/SEC-QA-Agent/fastapi_main.py", line 33, in user_query
+    llm1_output_dict = get_response_llm1(USER_REQUEST, "10-K")
+  File "/home/athekunal/SEC-Project/SEC-QA-Agent/LLM1.py", line 80, in get_response_llm1
+    llm1 = OpenAI(temperature=0.0)
+  File "/home/athekunal/.local/lib/python3.10/site-packages/langchain/load/serializable.py", line 74, in __init__
+    super().__init__(**kwargs)
+  File "pydantic/main.py", line 341, in pydantic.main.BaseModel.__init__
+pydantic.error_wrappers.ValidationError: 1 validation error for OpenAI
+__root__
+  Did not find openai_api_key, please add an environment variable `OPENAI_API_KEY` which contains it, or pass  `openai_api_key` as a named parameter. (type=value_error)
+[32mINFO[39m:     Shutting down
+[32mINFO[39m:     Waiting for application shutdown.
+[32mINFO[39m:     Application shutdown complete.
+[32mINFO[39m:     Finished server process [[36m57221[39m]
