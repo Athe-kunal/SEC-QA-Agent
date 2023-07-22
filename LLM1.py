@@ -24,7 +24,8 @@ augmented_query = ResponseSchema(
     description="Output the user query into list of sentences, where each sentence is a combination of a company name, year and query mentioned about it in the user query",
 )
 
-response_schema = [section_names, tickers, years, augmented_query]
+# response_schema = [section_names, tickers, years, augmented_query]
+response_schema = [section_names, tickers, years]
 
 output_parse = StructuredOutputParser.from_response_schemas(response_schema)
 format_instructions = output_parse.get_format_instructions()
