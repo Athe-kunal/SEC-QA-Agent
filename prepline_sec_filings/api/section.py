@@ -8,7 +8,16 @@ import os
 import gzip
 import mimetypes
 from typing import List, Union
-from fastapi import status, FastAPI, File, Form, Request, UploadFile, APIRouter, HTTPException
+from fastapi import (
+    status,
+    FastAPI,
+    File,
+    Form,
+    Request,
+    UploadFile,
+    APIRouter,
+    HTTPException,
+)
 from fastapi.responses import PlainTextResponse
 import json
 from fastapi.responses import StreamingResponse
@@ -17,8 +26,16 @@ from starlette.types import Send
 from base64 import b64encode
 from typing import Optional, Mapping, Iterator, Tuple
 import secrets
-from prepline_sec_filings.sections import section_string_to_enum, validate_section_names, SECSection
-from prepline_sec_filings.sec_document import SECDocument, REPORT_TYPES, VALID_FILING_TYPES
+from prepline_sec_filings.sections import (
+    section_string_to_enum,
+    validate_section_names,
+    SECSection,
+)
+from prepline_sec_filings.sec_document import (
+    SECDocument,
+    REPORT_TYPES,
+    VALID_FILING_TYPES,
+)
 from enum import Enum
 import re
 import signal
@@ -113,7 +130,11 @@ ISD = "isd"
 
 
 def pipeline_api(
-    text, response_type="application/json", response_schema="isd", m_section=[], m_section_regex=[]
+    text,
+    response_type="application/json",
+    response_schema="isd",
+    m_section=[],
+    m_section_regex=[],
 ):
     """Many supported sections including: RISK_FACTORS, MANAGEMENT_DISCUSSION, and many more"""
     validate_section_names(m_section)
@@ -138,7 +159,9 @@ def pipeline_api(
         else:
             m_section = [enum.name for enum in SECTIONS_S1]
     for section in m_section:
-        results[section] = sec_document.get_section_narrative(section_string_to_enum[section])
+        results[section] = sec_document.get_section_narrative(
+            section_string_to_enum[section]
+        )
     for i, section_regex in enumerate(m_section_regex):
         regex_enum = get_regex_enum(section_regex)
         with timeout(seconds=5):
@@ -227,7 +250,10 @@ class MultipartMixedResponse(StreamingResponse):
 
     def build_part(self, chunk: bytes) -> bytes:
         part = self.boundary + self.CRLF
-        part_headers = {"Content-Length": len(chunk), "Content-Transfer-Encoding": "base64"}
+        part_headers = {
+            "Content-Length": len(chunk),
+            "Content-Transfer-Encoding": "base64",
+        }
         if self.content_type is not None:
             part_headers["Content-Type"] = self.content_type
         part += self._build_part_headers(part_headers)
@@ -247,7 +273,11 @@ class MultipartMixedResponse(StreamingResponse):
                 chunk = chunk.encode(self.charset)
                 chunk = b64encode(chunk)
             await send(
-                {"type": "http.response.body", "body": self.build_part(chunk), "more_body": True}
+                {
+                    "type": "http.response.body",
+                    "body": self.build_part(chunk),
+                    "more_body": True,
+                }
             )
 
         await send({"type": "http.response.body", "body": b"", "more_body": False})
@@ -301,7 +331,11 @@ def pipeline_1(
 
     if isinstance(text_files, list) and len(text_files):
         if len(text_files) > 1:
-            if content_type and content_type not in ["*/*", "multipart/mixed", "application/json"]:
+            if content_type and content_type not in [
+                "*/*",
+                "multipart/mixed",
+                "application/json",
+            ]:
                 raise HTTPException(
                     detail=(
                         f"Conflict in media type {content_type}"
@@ -333,7 +367,12 @@ def pipeline_1(
                         status_code=status.HTTP_406_NOT_ACCEPTABLE,
                     )
 
-                valid_response_types = ["application/json", "text/csv", "*/*", "multipart/mixed"]
+                valid_response_types = [
+                    "application/json",
+                    "text/csv",
+                    "*/*",
+                    "multipart/mixed",
+                ]
                 if media_type in valid_response_types:
                     if is_multipart:
                         if type(response) not in [str, bytes]:

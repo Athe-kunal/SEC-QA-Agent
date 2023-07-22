@@ -22,7 +22,9 @@ class SECSection(Enum):
         r"(?:principal.*(?:stockholder|shareholder)s?)|(?:(security|stock|share) "
         r"ownership .*certain)"
     )
-    DESCRIPTION_OF_STOCK = re.compile(r"^description of (?:capital stock|share capital|securities)")
+    DESCRIPTION_OF_STOCK = re.compile(
+        r"^description of (?:capital stock|share capital|securities)"
+    )
     DESCRIPTION_OF_DEBT = re.compile(r"^description of .*debt")
     FUTURE_SALE = re.compile(r"(?:shares|stock) eligible for future sale")
     US_TAX = re.compile(
@@ -33,7 +35,9 @@ class SECSection(Enum):
     EXPERTS = re.compile(r"^experts$")
     MORE_INFORMATION = re.compile(r"(?:additional|more) information")
     FINANCIAL_STATEMENTS = r"financial statements"
-    MARKET_RISK_DISCLOSURES = r"(?:quantitative|qualitative) disclosures? about market risk"
+    MARKET_RISK_DISCLOSURES = (
+        r"(?:quantitative|qualitative) disclosures? about market risk"
+    )
     CONTROLS_AND_PROCEDURES = r"controls and procedures"
     LEGAL_PROCEEDINGS = r"legal proceedings"
     DEFAULTS = r"defaults (?:up)?on .*securities"
@@ -141,7 +145,9 @@ def validate_section_names(section_names: List[str]):
     elif len(section_names) > 1 and ALL_SECTIONS in section_names:
         raise ValueError(f"{ALL_SECTIONS} may not be specified with other sections")
 
-    invalid_names = [name for name in section_names if name not in section_string_to_enum]
+    invalid_names = [
+        name for name in section_names if name not in section_string_to_enum
+    ]
     if invalid_names:
         raise ValueError(f"The following section names are not valid: {invalid_names}")
     return None

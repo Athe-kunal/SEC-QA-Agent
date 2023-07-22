@@ -19,7 +19,6 @@ from config import *
 from langchain.embeddings.sentence_transformer import SentenceTransformerEmbeddings
 
 
-
 def find_files(directory, filename):
     matches = []
 
@@ -29,15 +28,17 @@ def find_files(directory, filename):
 
     return matches
 
+
 def post_process(text):
-    text = re.sub(r'\\.', '', text)
+    text = re.sub(r"\\.", "", text)
     sentence_splits = text.split(".")
     sentence_with_delimiter = ".\n".join(sentence_splits)
-    sentence_with_delimiter = re.sub(r' {2,}', '\n\n', sentence_with_delimiter)
+    sentence_with_delimiter = re.sub(r" {2,}", "\n\n", sentence_with_delimiter)
     return sentence_with_delimiter
 
-def load_documents(doc_name:str):
-    files = find_files('data', f'{doc_name}.json')
+
+def load_documents(doc_name: str):
+    files = find_files("data", f"{doc_name}.json")
     full_data = []
     for file in files:
         with open(file) as f:
@@ -45,33 +46,48 @@ def load_documents(doc_name:str):
         full_data.append(data)
 
     documents = []
-    metadata = [] 
+    metadata = []
 
     for tic_data in full_data:
-        curr_year = tic_data['year']
-        ticker = tic_data['ticker']
-        filing_type = tic_data['filing_type']
-            
-        for section,section_text in tic_data['all_texts'].items():
+        curr_year = tic_data["year"]
+        ticker = tic_data["ticker"]
+        filing_type = tic_data["filing_type"]
+
+        for section, section_text in tic_data["all_texts"].items():
             documents.append(section_text)
-            metadata.append({"year":curr_year,"ticker":ticker,"section":section,"filing_type":filing_type})
-    
-    return documents,metadata
+            metadata.append(
+                {
+                    "year": curr_year,
+                    "ticker": ticker,
+                    "section": section,
+                    "filing_type": filing_type,
+                }
+            )
+
+    return documents, metadata
+
 
 def chunk_documents(
-    documents: List[str],metadata:List[dict],chunk_size:int=CHUNK_SIZE,chunk_overlap:int=CHUNK_OVERLAP      
+    documents: List[str],
+    metadata: List[dict],
+    chunk_size: int = CHUNK_SIZE,
+    chunk_overlap: int = CHUNK_OVERLAP,
 ):
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size,chunk_overlap=chunk_overlap)
+    text_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=chunk_size, chunk_overlap=chunk_overlap
+    )
 
-# Split each element in the list
+    # Split each element in the list
     post_process_documents = [post_process(txt) for txt in documents]
-    split_list = [text_splitter.split_text(element) for element in post_process_documents]
+    split_list = [
+        text_splitter.split_text(element) for element in post_process_documents
+    ]
     splitted_docs = []
     splitted_metadata = []
 
-    for idx,docs in enumerate(split_list):
+    for idx, docs in enumerate(split_list):
         curr_metadata = metadata[idx]
-        if isinstance(docs,list):
+        if isinstance(docs, list):
             for doc in docs:
                 splitted_docs.append(doc)
                 splitted_metadata.append(curr_metadata)
@@ -80,45 +96,68 @@ def chunk_documents(
             splitted_metadata.append(curr_metadata)
 
     post_process_splitted_metadata = []
-    for idx,sm in enumerate(splitted_metadata):
+    for idx, sm in enumerate(splitted_metadata):
         metadata_dict = {}
-        sm.update({"document_type":"10-K"})
-        metadata_dict.update({"full_metadata":sm['ticker']+"_"+sm["year"]+"_"+sm["section"]+"_"+sm["document_type"]})
-        
+        sm.update({"document_type": "10-K"})
+        metadata_dict.update(
+            {
+                "full_metadata": sm["ticker"]
+                + "_"
+                + sm["year"]
+                + "_"
+                + sm["section"]
+                + "_"
+                + sm["document_type"]
+            }
+        )
+
         post_process_splitted_metadata.append(metadata_dict)
-    assert len(splitted_docs)==len(post_process_splitted_metadata), f"Length of splitted docs and metadata should be the same, but got {len(splitted_docs)} and {len(post_process_splitted_metadata)} respectively"
-    
+    assert len(splitted_docs) == len(
+        post_process_splitted_metadata
+    ), f"Length of splitted docs and metadata should be the same, but got {len(splitted_docs)} and {len(post_process_splitted_metadata)} respectively"
+
     all_splitted_doc = []
 
-    for split_doc,split_meta in zip(splitted_docs,post_process_splitted_metadata):
-        all_splitted_doc.append(Document(page_content=split_doc,metadata=split_meta))
-    
-    return all_splitted_doc,splitted_docs,post_process_splitted_metadata
+    for split_doc, split_meta in zip(splitted_docs, post_process_splitted_metadata):
+        all_splitted_doc.append(Document(page_content=split_doc, metadata=split_meta))
+
+    return all_splitted_doc, splitted_docs, post_process_splitted_metadata
 
 
 finbert_embed = HuggingFaceEmbeddings(model_name="ProsusAI/finbert")
+
 
 class FinBertEmbeddings(EmbeddingFunction):
     def __call__(self, texts: Documents) -> Embeddings:
         embed_out = finbert_embed.embed_documents(texts)
         return embed_out
-    
-def create_vector_store_langchain(documents,doc_name:str,if_finbert:bool=False):
+
+
+def create_vector_store_langchain(documents, doc_name: str, if_finbert: bool = False):
     if if_finbert:
-        embedding_function = FinBertEmbeddings()    
+        embedding_function = FinBertEmbeddings()
     else:
-        embedding_function = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
-    vector_store = Chroma.from_documents(
-            documents=documents,
-            embedding=embedding_function,
-            ids=[f"id{i}" for i in range(len(documents))],
-            persist_directory=f"sec-{doc_name}",
-            collection_name=f"SEC-{doc_name}"
+        embedding_function = SentenceTransformerEmbeddings(
+            model_name="all-MiniLM-L6-v2"
         )
+    vector_store = Chroma.from_documents(
+        documents=documents,
+        embedding=embedding_function,
+        ids=[f"id{i}" for i in range(len(documents))],
+        persist_directory=f"sec-{doc_name}",
+        collection_name=f"SEC-{doc_name}",
+    )
     vector_store.persist()
     return vector_store
 
-def create_vector_store_chroma(splitted_docs,splitted_metadata,doc_name:str,if_delete:bool=False,if_finbert:bool=False):
+
+def create_vector_store_chroma(
+    splitted_docs,
+    splitted_metadata,
+    doc_name: str,
+    if_delete: bool = False,
+    if_finbert: bool = False,
+):
     if if_finbert:
         collection_name = f"SEC-{doc_name}-finbert"
         persistent_directory = f"sec-{doc_name}-finbert"
@@ -127,12 +166,12 @@ def create_vector_store_chroma(splitted_docs,splitted_metadata,doc_name:str,if_d
         persistent_directory = f"sec-{doc_name}"
 
     chroma_client = chromadb.Client(
-    Settings(
-    chroma_db_impl="duckdb+parquet",
-    persist_directory=persistent_directory
-))
+        Settings(
+            chroma_db_impl="duckdb+parquet", persist_directory=persistent_directory
+        )
+    )
 
-    #Vector database
+    # Vector database
     if if_delete:
         if len(chroma_client.list_collections()) > 0 and collection_name in [
             chroma_client.list_collections()[0].name
@@ -141,7 +180,9 @@ def create_vector_store_chroma(splitted_docs,splitted_metadata,doc_name:str,if_d
         # else:
     print(f"Creating collection: '{collection_name}'")
     if if_finbert:
-        collection = chroma_client.create_collection(name=collection_name,embedding_function=FinBertEmbeddings())
+        collection = chroma_client.create_collection(
+            name=collection_name, embedding_function=FinBertEmbeddings()
+        )
     else:
         collection = chroma_client.create_collection(name=collection_name)
 
@@ -150,12 +191,13 @@ def create_vector_store_chroma(splitted_docs,splitted_metadata,doc_name:str,if_d
     collection.add(
         documents=splitted_docs,
         metadatas=splitted_metadata,
-        ids=[f"id{i}" for i in range(1,len(splitted_docs)+1)]
+        ids=[f"id{i}" for i in range(1, len(splitted_docs) + 1)],
     )
     print(f"Completed building vectordatabase")
     chroma_client.persist()
 
     return chroma_client
+
 
 def log_index(vector_store_dir: str, run: "wandb.run"):
     """Log a vector store to wandb
@@ -168,10 +210,23 @@ def log_index(vector_store_dir: str, run: "wandb.run"):
     index_artifact.add_dir(vector_store_dir)
     run.log_artifact(index_artifact)
 
+
 def main():
-    parser = argparse.ArgumentParser(description='Document name to build database')
-    parser.add_argument("-doc","--doc_name",type=str,default="10-K",help="Name of the SEC filings document")
-    parser.add_argument("-fbert","--finbert",type=bool,default=False,help="Name of the embeddings document")
+    parser = argparse.ArgumentParser(description="Document name to build database")
+    parser.add_argument(
+        "-doc",
+        "--doc_name",
+        type=str,
+        default="10-K",
+        help="Name of the SEC filings document",
+    )
+    parser.add_argument(
+        "-fbert",
+        "--finbert",
+        type=bool,
+        default=False,
+        help="Name of the embeddings document",
+    )
     parser.add_argument(
         "--wandb_project",
         default="llmapps",
@@ -185,20 +240,21 @@ def main():
     if_finbert = args.finbert
     langchain.llm_cache = SQLiteCache(database_path=f"sec-{doc_name}.db")
 
-    documents,metadata = load_documents(doc_name)
+    documents, metadata = load_documents(doc_name)
 
-    all_splitted_doc,splitted_docs,post_process_splitted_metadata = chunk_documents(documents,metadata)
+    all_splitted_doc, splitted_docs, post_process_splitted_metadata = chunk_documents(
+        documents, metadata
+    )
 
-    vector_store = create_vector_store_chroma(splitted_docs,post_process_splitted_metadata, doc_name,if_finbert=if_finbert)
+    vector_store = create_vector_store_chroma(
+        splitted_docs, post_process_splitted_metadata, doc_name, if_finbert=if_finbert
+    )
     if if_finbert:
-        log_index(f"./sec-{doc_name}-finbert",run)
+        log_index(f"./sec-{doc_name}-finbert", run)
     else:
-        log_index(f"./sec-{doc_name}",run)
+        log_index(f"./sec-{doc_name}", run)
     run.finish()
+
 
 if __name__ == "__main__":
     main()
-
-
-
-

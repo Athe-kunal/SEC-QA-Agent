@@ -14,7 +14,13 @@ from sklearn.cluster import DBSCAN
 from collections import defaultdict
 
 from unstructured.cleaners.core import clean
-from unstructured.documents.elements import Text, ListItem, NarrativeText, Title, Element
+from unstructured.documents.elements import (
+    Text,
+    ListItem,
+    NarrativeText,
+    Title,
+    Element,
+)
 from unstructured.documents.html import HTMLDocument
 from unstructured.nlp.partition import is_possible_title
 from prepline_sec_filings.sections import SECSection
@@ -35,14 +41,18 @@ ITEM_TITLE_RE = re.compile(r"(?i)item \d{1,3}(?:[a-z]|\([a-z]\))?(?:\.)?(?::)?")
 
 # NOTE(yuming): clean_sec_text is a partial cleaner from clean,
 # and is used for cleaning a section of text from a SEC filing.
-clean_sec_text = partial(clean, extra_whitespace=True, dashes=True, trailing_punctuation=True)
+clean_sec_text = partial(
+    clean, extra_whitespace=True, dashes=True, trailing_punctuation=True
+)
 
 
 def _raise_for_invalid_filing_type(filing_type: Optional[str]):
     if not filing_type:
         raise ValueError("Filing type is empty.")
     elif filing_type not in VALID_FILING_TYPES:
-        raise ValueError(f"Filing type was {filing_type}. Expected: {VALID_FILING_TYPES}")
+        raise ValueError(
+            f"Filing type was {filing_type}. Expected: {VALID_FILING_TYPES}"
+        )
 
 
 class SECDocument(HTMLDocument):
@@ -71,7 +81,9 @@ class SECDocument(HTMLDocument):
             for i, element in enumerate(elements):
                 clean_title_text = clean_sec_text(element.text).lower()
                 title_indices[clean_title_text].append(i)
-            duplicate_title_indices = {k: v for k, v in title_indices.items() if len(v) > 1}
+            duplicate_title_indices = {
+                k: v for k, v in title_indices.items() if len(v) > 1
+            }
             for title, indices in duplicate_title_indices.items():
                 # NOTE(yuming): Make sure that we find the pair of duplicated titles.
                 if "prospectus" in title and len(indices) == 2:
@@ -104,8 +116,16 @@ class SECDocument(HTMLDocument):
                     for el in cluster_elements
                     if isinstance(el, Title)
                 ]
-            ) and any([is_toc_title(el.text) for el in cluster_elements if isinstance(el, Title)]):
-                return out_cls.from_elements(self._filter_table_of_contents(cluster_elements))
+            ) and any(
+                [
+                    is_toc_title(el.text)
+                    for el in cluster_elements
+                    if isinstance(el, Title)
+                ]
+            ):
+                return out_cls.from_elements(
+                    self._filter_table_of_contents(cluster_elements)
+                )
         return out_cls.from_elements(self._filter_table_of_contents(self.elements))
 
     def get_section_narrative_no_toc(self, section: SECSection) -> List[NarrativeText]:
@@ -125,7 +145,9 @@ class SECDocument(HTMLDocument):
                         return section_elements
                     else:
                         in_section = False
-                elif isinstance(element, NarrativeText) or isinstance(element, ListItem):
+                elif isinstance(element, NarrativeText) or isinstance(
+                    element, ListItem
+                ):
                     section_elements.append(element)
 
             if is_title and is_section_elem(section, element, self.filing_type):
@@ -133,7 +155,9 @@ class SECDocument(HTMLDocument):
 
         return section_elements
 
-    def _get_toc_sections(self, section: SECSection, toc: HTMLDocument) -> Tuple[Text, Text]:
+    def _get_toc_sections(
+        self, section: SECSection, toc: HTMLDocument
+    ) -> Tuple[Text, Text]:
         """Identifies section title and next section title in TOC under the given section heading"""
         # Note(yuming): The matching section and the section after the matching section
         # can be thought of as placeholders to look for matching content below the toc.
@@ -207,7 +231,9 @@ class SECDocument(HTMLDocument):
             # to avoid the worst case of returning the entire doc.
             return get_narrative_texts(doc_after_section_heading, up_to_next_title=True)
 
-        return get_narrative_texts(doc_after_section_heading.before_element(section_end_element))
+        return get_narrative_texts(
+            doc_after_section_heading.before_element(section_end_element)
+        )
 
     def get_risk_narrative(self) -> List[NarrativeText]:
         """Identifies narrative text sections that fall under the "risk" heading"""
@@ -216,7 +242,9 @@ class SECDocument(HTMLDocument):
     def doc_after_cleaners(
         self, skip_headers_and_footers=False, skip_table_text=False, inplace=False
     ) -> HTMLDocument:
-        new_doc = super().doc_after_cleaners(skip_headers_and_footers, skip_table_text, inplace)
+        new_doc = super().doc_after_cleaners(
+            skip_headers_and_footers, skip_table_text, inplace
+        )
         if not inplace:
             # NOTE(alan): Copy filing_type since this attribute isn't in the base class
             new_doc.filing_type = self.filing_type
@@ -230,7 +258,9 @@ class SECDocument(HTMLDocument):
             self.filing_type = type_tag.text.strip()
         return self.document_tree
 
-    def _is_last_section_in_report(self, section: SECSection, toc: HTMLDocument) -> bool:
+    def _is_last_section_in_report(
+        self, section: SECSection, toc: HTMLDocument
+    ) -> bool:
         """Checks to see if the section is the last section in toc for a report types filing."""
         # Note(yuming): This method assume the section already exists in toc.
         if self.filing_type in ["10-K", "10-K/A"]:
@@ -253,7 +283,9 @@ class SECDocument(HTMLDocument):
         return False
 
 
-def get_narrative_texts(doc: HTMLDocument, up_to_next_title: Optional[bool] = False) -> List[Text]:
+def get_narrative_texts(
+    doc: HTMLDocument, up_to_next_title: Optional[bool] = False
+) -> List[Text]:
     """Returns a list of NarrativeText or ListItem from document,
     with option to return narrative texts only up to next Title element."""
     if up_to_next_title:
@@ -266,11 +298,15 @@ def get_narrative_texts(doc: HTMLDocument, up_to_next_title: Optional[bool] = Fa
         return narrative_texts
     else:
         return [
-            el for el in doc.elements if isinstance(el, NarrativeText) or isinstance(el, ListItem)
+            el
+            for el in doc.elements
+            if isinstance(el, NarrativeText) or isinstance(el, ListItem)
         ]
 
 
-def is_section_elem(section: SECSection, elem: Text, filing_type: Optional[str]) -> bool:
+def is_section_elem(
+    section: SECSection, elem: Text, filing_type: Optional[str]
+) -> bool:
     """Checks to see if a text element matches the section title for a given filing type"""
     _raise_for_invalid_filing_type(filing_type)
     if section is SECSection.RISK_FACTORS:
@@ -278,10 +314,14 @@ def is_section_elem(section: SECSection, elem: Text, filing_type: Optional[str])
     else:
 
         def _is_matching_section_pattern(text):
-            return bool(re.search(section.pattern, clean_sec_text(text, lowercase=True)))
+            return bool(
+                re.search(section.pattern, clean_sec_text(text, lowercase=True))
+            )
 
         if filing_type in REPORT_TYPES:
-            return _is_matching_section_pattern(remove_item_from_section_text(elem.text))
+            return _is_matching_section_pattern(
+                remove_item_from_section_text(elem.text)
+            )
         else:
             return _is_matching_section_pattern(elem.text)
 

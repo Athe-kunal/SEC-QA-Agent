@@ -12,11 +12,11 @@ default_config = SimpleNamespace(
     chat_prompt_artifact="athe_kunal/llmapps/chat_prompt:latest",
     chat_temperature=0.3,
     max_fallback_retries=1,
-    model_name="gpt-3.5-turbo"
+    model_name="gpt-3.5-turbo",
 )
 
-#LLM 1
-DEFINITIONS_10Q = '''
+# LLM 1
+DEFINITIONS_10Q = """
 
 FINANCIAL_STATEMENTS: This section in the 10-Q document is a comprehensive report of a company's financial performance during the quarter. It includes the income statement, balance sheet, and cash flow statement. The financial statements section provides detailed information on the company's revenues, expenses, assets, liabilities, and cash flows.
 
@@ -37,7 +37,7 @@ DEFAULTS: This section outlines any significant defaults on senior securities, s
 MINE_SAFETY: For companies engaged in mining operations, this section discloses any significant mine safety violations or other regulatory matters required by the Mine Safety and Health Administration. These disclosures provide insights into the company's compliance with safety regulations and potential liabilities.
 
 OTHER_INFORMATION: This section serves as a catch-all for any material information that doesn't fit into the other sections. It could include a wide variety of information, such as disclosures about unregistered sales of equity securities, material changes in the rights of security holders, or changes in the company's certifying accountant.
-'''
+"""
 
 DEFINITIONS_10K = """
 BUSINESS: Provides an overview of the company's operations, products, services, markets, and competitive landscape.

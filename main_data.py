@@ -54,7 +54,7 @@ def multiprocess_run(tic):
 
 if __name__ == "__main__":
     start = time.time()
-    thread_workers = min(len(tickers),num_workers)
+    thread_workers = min(len(tickers), num_workers)
     with concurrent.futures.ThreadPoolExecutor(max_workers=thread_workers) as executor:
         results = executor.map(multiprocess_run, tickers)
 
