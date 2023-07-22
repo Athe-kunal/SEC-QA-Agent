@@ -1,0 +1,128 @@
+{
+    "os": "Linux-5.15.90.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "python": "3.10.6",
+    "heartbeatAt": "2023-07-22T03:53:31.762833",
+    "startedAt": "2023-07-22T03:53:30.997133",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "-fbert",
+        "True"
+    ],
+    "state": "running",
+    "program": "/home/athekunal/SEC-Project/SEC-QA-Agent/build_database.py",
+    "codePath": "build_database.py",
+    "git": {
+        "remote": "https://github.com/Athe-kunal/SEC-QA-Agent.git",
+        "commit": "9e223b9a0dc482b31f3262d1ae5e7d33d935b437"
+    },
+    "email": "athekunal@gmail.com",
+    "root": "/home/athekunal/SEC-Project/SEC-QA-Agent",
+    "host": "LAPTOP-QF1FUNPH",
+    "username": "athekunal",
+    "executable": "/usr/bin/python3",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 1896.3879999999992,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1896.388,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.388,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.388,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.388,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.388,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.388,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.388,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.388,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.388,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.388,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.388,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.388,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.388,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.388,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.388,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 1896.388,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "total": 1006.853931427002,
+        "used": 13.721359252929688
+    },
+    "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+            "memory_total": 4294967296
+        }
+    ],
+    "memory": {
+        "total": 7.439723968505859
+    }
+}

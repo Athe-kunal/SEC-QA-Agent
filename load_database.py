@@ -56,7 +56,7 @@ def load_vector_store_local(vcectore_store_dir:str,doc_name,if_finbert:bool=Fals
             persist_directory=vcectore_store_dir
             )
         )
-        collection_name = f"SEC-{doc_name}"
+        collection_name = f"SEC-{doc_name}-finbert"
         restore_collection = chroma_restore_client.get_collection(name=collection_name,embedding_function=embedding_fn)
     else:
         chroma_restore_client = chromadb.Client(
@@ -99,15 +99,20 @@ def get_relevant_docs(llm1_output_dict,query_metadata,restore_collection):
     
     return relevant_sentences
 
-def get_relevant_dict_with_mmr(llm1_output_dict,restore_collection,user_query,doc_name="10-K"):
+def get_relevant_dict_with_mmr(llm1_output_dict,restore_collection,user_query,doc_name="10-K",if_finbert:bool=False):
     section_names = llm1_output_dict['Section_Names']
     ticker_names = llm1_output_dict['Tickers']
     years = llm1_output_dict['Years']
     all_relevant_docs = defaultdict()
-    default_ef = embedding_functions.DefaultEmbeddingFunction()
-    query_embed = default_ef(texts=user_query)
-    query_embed_arr = np.array(query_embed[0])
+    if not if_finbert:
 
+        default_ef = embedding_functions.DefaultEmbeddingFunction()
+        query_embed = default_ef(texts=user_query)
+        query_embed_arr = np.array(query_embed[0])
+    elif if_finbert:
+        finbert = FinBertEmbeddings()
+        query_embed = finbert(texts=user_query)
+        query_embed_arr = np.array(query_embed[0])
     for tic in ticker_names:
         for yr in years:
             individual_metadata = [{"full_metadata":elem[0]+"_"+elem[1]+"_"+elem[2]+"_"+doc_name} for elem in list(itertools.product([tic],[yr],section_names))]

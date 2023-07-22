@@ -119,8 +119,12 @@ def create_vector_store_langchain(documents,doc_name:str,if_finbert:bool=False):
     return vector_store
 
 def create_vector_store_chroma(splitted_docs,splitted_metadata,doc_name:str,if_delete:bool=False,if_finbert:bool=False):
-    collection_name = f"SEC-{doc_name}"
-    persistent_directory = f"sec-{doc_name}"
+    if if_finbert:
+        collection_name = f"SEC-{doc_name}-finbert"
+        persistent_directory = f"sec-{doc_name}-finbert"
+    else:
+        collection_name = f"SEC-{doc_name}"
+        persistent_directory = f"sec-{doc_name}"
 
     chroma_client = chromadb.Client(
     Settings(
@@ -167,6 +171,7 @@ def log_index(vector_store_dir: str, run: "wandb.run"):
 def main():
     parser = argparse.ArgumentParser(description='Document name to build database')
     parser.add_argument("-doc","--doc_name",type=str,default="10-K",help="Name of the SEC filings document")
+    parser.add_argument("-fbert","--finbert",type=bool,default=False,help="Name of the embeddings document")
     parser.add_argument(
         "--wandb_project",
         default="llmapps",
@@ -177,14 +182,18 @@ def main():
     args = parser.parse_args()
     run = wandb.init(project=args.wandb_project, config=args)
     doc_name = args.doc_name
+    if_finbert = args.finbert
     langchain.llm_cache = SQLiteCache(database_path=f"sec-{doc_name}.db")
 
     documents,metadata = load_documents(doc_name)
 
     all_splitted_doc,splitted_docs,post_process_splitted_metadata = chunk_documents(documents,metadata)
 
-    vector_store = create_vector_store_chroma(splitted_docs,post_process_splitted_metadata, doc_name)
-    log_index(f"./sec-{doc_name}",run)
+    vector_store = create_vector_store_chroma(splitted_docs,post_process_splitted_metadata, doc_name,if_finbert=if_finbert)
+    if if_finbert:
+        log_index(f"./sec-{doc_name}-finbert",run)
+    else:
+        log_index(f"./sec-{doc_name}",run)
     run.finish()
 
 if __name__ == "__main__":
