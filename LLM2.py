@@ -8,7 +8,7 @@ from config import *
 from langchain.chat_models import ChatOpenAI
 
 
-autolog({"project": PROJECT, "job_type": JOB_TYPE + "_LLM2"})
+# autolog({"project": PROJECT, "job_type": JOB_TYPE + "_LLM2"})
 
 
 def get_response_llm2(relevant_sentences, user_query, llm1_output_dict):
@@ -35,7 +35,7 @@ def get_response_llm2(relevant_sentences, user_query, llm1_output_dict):
 
     openai.api_key = os.environ["OPENAI_API_KEY"]
 
-    llm_2 = ChatOpenAI(temperature=0.0, model="gpt-3.5-turbo-16k")
+    llm_2 = ChatOpenAI(temperature=0.0, model="gpt-3.5-turbo-16k",streaming=True)
 
     output = llm_2.predict(llm2_prompt)
     return output
