@@ -86,22 +86,6 @@ def get_regex_enum(section_regex):
     return CustomSECSection.CUSTOM
 
 
-def extract_year(s: str):
-    """Extract the URL from filing detail
-
-    Args:
-        s (str): filing detail URL
-
-    Returns:
-        Optional[str,None]: year for 10-K and year plus month for 10-Q
-    """
-    matches = re.findall("20\d{2}", s)
-    if matches:
-        return matches[-1]  # Return the first match
-    else:
-        return None  # In case no match is found
-
-
 class SECExtractor:
     def __init__(
         self,
@@ -111,6 +95,7 @@ class SECExtractor:
         start_date: str = DEFAULT_AFTER_DATE,
         end_date: str = DEFAULT_BEFORE_DATE,
         sections: List[str] = ["_ALL"],
+        include_amends:bool=True
     ):
         """_summary_
 
@@ -128,7 +113,7 @@ class SECExtractor:
         self.start_date = start_date
         self.end_date = end_date
         self.sections = sections
-
+        self.include_amends = include_amends
     def get_accession_numbers(self, tic: str) -> dict:
         """Get accession numbers and download URL for the SEC filing
 
@@ -145,22 +130,25 @@ class SECExtractor:
             self.amount,
             self.start_date,
             self.end_date,
-            include_amends=False,
+            include_amends=self.include_amends,
         )
         # fm.append(filing_metadata)
         acc_nums_yrs = [
             [
+                self.get_year(fm.filing_details_url),
                 fm.accession_number.replace("-", ""),
-                self.get_year(fm.filing_details_url.split("-")[1]),
-                fm.full_submission_url,
+                fm.full_submission_url
             ]
             for fm in filing_metadata
         ]
+        for idx,fm in enumerate(acc_nums_yrs[:-1]):
+            if fm[0]==None:
+                fm[0]=acc_nums_yrs[idx+1][0]
         for acy in acc_nums_yrs:
             if tic not in final_dict:
                 final_dict.update({tic: []})
             final_dict[tic].append(
-                {"year": acy[1], "accession_number": acy[0], "url": acy[2]}
+                {"year": acy[0], "accession_number": acy[1], "url": acy[2]}
             )
         return final_dict
 
@@ -173,11 +161,16 @@ class SECExtractor:
         Returns:
             str: year for 10-K and year,month for 10-Q
         """
+        details = filing_details.split("/")[-1]
         if self.filing_type == "10-K":
-            year = extract_year(filing_details.split("/")[-1])
+            matches = re.findall("20\d{2}", details)
         elif self.filing_type == "10-Q":
-            year = filing_details.rsplit(".", 1)[0][-8:][:-2]
-        return year
+            matches = re.findall("20\d{4}", details)
+
+        if matches:
+            return matches[-1]  # Return the first match
+        else:
+            return None  # In case no match is found
 
     def get_all_text(self, section, all_narratives):
         """Join all the text from a section
