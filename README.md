@@ -23,4 +23,8 @@ Sample Answer Screenshot
 
 ![Sample Answer](https://github.com/Athe-kunal/SEC-QA-Agent/blob/main/Sample%20Answer.png)
 
+Demo GIF
+
+![Alt Text](https://github.com/Athe-kunal/SEC-QA-Agent/blob/main/Demo.gif)
+
 
