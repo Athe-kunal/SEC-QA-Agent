@@ -176,7 +176,7 @@ def get_relevant_docs_via_mmr(relevant_docs_dict: dict):
 
     for key, value in relevant_docs_dict.items():
         tic, year = key.split("_")
-        relevant_sentences += f"Relevant documents for {tic} in the year {year}" + ": "
+        relevant_sentences += f"Relevant documents for {tic} in the year {year}" + "\n" + "-----------------"
         relevant_sentences += "\n ".join(value["docs"])
         relevant_sentences += "\n\n"
 
