@@ -28,6 +28,15 @@ def find_files(directory, filename):
 
     return matches
 
+def get_input_files(directory,filing_type):
+    file_names_list = []
+
+    for root,_,filenames in os.walk(directory):
+        for file in filenames:
+            if file.startswith(filing_type):
+                file_names_list.append(os.path.join(root,file))
+    return file_names_list
+
 
 def post_process(text):
     text = re.sub(r"\\.", "", text)
