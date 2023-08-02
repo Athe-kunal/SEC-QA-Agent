@@ -47,8 +47,8 @@ def post_process(text):
 
 
 def load_documents(doc_name: str):
-    # files = find_files("data", f"{doc_name}.json")
-    files = get_input_files("data", doc_name)
+    files = find_files("data", f"{doc_name}.json")
+    # files = get_input_files("data", doc_name)
     full_data = []
     for file in files:
         with open(file) as f:
