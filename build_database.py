@@ -108,7 +108,6 @@ def chunk_documents(
     post_process_splitted_metadata = []
     for idx, sm in enumerate(splitted_metadata):
         metadata_dict = {}
-        sm.update({"document_type": "10-K"})
         metadata_dict.update(
             {
                 "full_metadata": sm["ticker"]
@@ -117,7 +116,7 @@ def chunk_documents(
                 + "_"
                 + sm["section"]
                 + "_"
-                + sm["document_type"]
+                + sm["filing_type"]
             }
         )
 
