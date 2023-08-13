@@ -39,6 +39,7 @@ def get_input_files(directory,filing_type):
 
 
 def post_process(text):
+    text = re.sub("\xa0"," ",text)
     text = re.sub(r"\\.", "", text)
     sentence_splits = text.split(".")
     sentence_with_delimiter = ".\n".join(sentence_splits)
