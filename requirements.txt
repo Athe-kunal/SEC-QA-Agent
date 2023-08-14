@@ -1,6 +1,6 @@
 aiohttp==3.8.4
 chromadb==0.3.29
-fastapi==0.100.0
+fastapi==0.85.1
 langchain==0.0.234
 numpy==1.25.1
 openai==0.27.8
@@ -13,3 +13,5 @@ tqdm==4.65.0
 typing_extensions==4.7.1
 unstructured==0.8.1
 streamlit
+sentence_transformers
+wandb
