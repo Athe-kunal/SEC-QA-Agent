@@ -34,6 +34,6 @@ if st.session_state.messages[-1]["role"] != "assistant":
             response,relevant_sentences = generate_response(prompt) 
             st.write(response) 
             expander = st.expander("See relevant Documents")
-            expander.write(relevant_sentences)
+            expander.text(relevant_sentences)
     message = {"role": "assistant", "content": response}
     st.session_state.messages.append(message)

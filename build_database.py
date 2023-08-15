@@ -41,9 +41,11 @@ def get_input_files(directory,filing_type):
 def post_process(text):
     text = re.sub("\xa0"," ",text)
     text = re.sub(r"\\.", "", text)
-    sentence_splits = text.split(".")
-    sentence_with_delimiter = ".\n".join(sentence_splits)
+    # sentence_splits = text.split(".")
+    # sentence_with_delimiter = ".\n".join(sentence_splits)
+    sentence_with_delimiter = re.sub(r'\.\s',".\n",text)
     sentence_with_delimiter = re.sub(r" {2,}", "\n\n", sentence_with_delimiter)
+    # sentence_with_delimiter = re.sub(r" {2,}", "\n\n", text)
     return sentence_with_delimiter
 
 
