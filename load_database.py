@@ -17,6 +17,7 @@ from config import NUM_RESULTS
 from chromadb.utils import embedding_functions
 import numpy as np
 import itertools
+import re
 
 finbert_embed = HuggingFaceEmbeddings(model_name="ProsusAI/finbert")
 
@@ -176,7 +177,10 @@ def get_relevant_docs_via_mmr(relevant_docs_dict: dict):
 
     for key, value in relevant_docs_dict.items():
         tic, year = key.split("_")
-        relevant_sentences += f"Relevant documents for {tic} in the year {year}" + "\n" + "-----------------"
+        relevant_sentences += f"Relevant documents for {tic} in the year {year}" + "\n" 
+        curr_docs = value['docs']
+        curr_docs = re.sub("\xa0", " ",curr_docs)
+        curr_docs = re.sub("\t", " ",curr_docs)
         relevant_sentences += "\n ".join(value["docs"])
         relevant_sentences += "\n\n"
 
