@@ -32,7 +32,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
         with st.spinner("Answering..."):
             response,relevant_sentences = generate_response(prompt) 
-            st.write(response) 
+            st.text(response) 
             expander = st.expander("See relevant Documents")
             expander.text(relevant_sentences)
     message = {"role": "assistant", "content": response}
