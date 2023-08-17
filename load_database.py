@@ -83,15 +83,15 @@ def load_vector_store_local(
     return restore_collection
 
 
-def get_relevant_docs(llm1_output_dict, query_metadata, restore_collection):
+def get_relevant_docs(query_metadata, restore_collection,user_request:str):
     # print(llm1_output_dict)
     if len(query_metadata) <= 1:
         where_clause = query_metadata[0]
     else:
         where_clause = {"$or": query_metadata}
     query_results = restore_collection.query(
-        query_texts=llm1_output_dict["augmented_query"],
-        n_results=20 // len(llm1_output_dict["augmented_query"]),
+        query_texts=user_request,
+        n_results=20,
         where=where_clause,
         include=["metadatas", "documents", "distances", "embeddings"],
     )

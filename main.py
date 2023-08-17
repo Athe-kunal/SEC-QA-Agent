@@ -22,12 +22,12 @@ def SEC_LLM(USER_REQUEST):
     llm1_output_dict = get_response_llm1(USER_REQUEST, "10-K")
     # print(llm1_output_dict)
     # llm1_output_dict = {'Section_Names': ['RISK FACTORS', 'MARKET RISK DISCLOSURES', 'LEGAL PROCEEDINGS', 'UNRESOLVED STAFF COMMENTS', 'MINE SAFETY'], 'Tickers': ['AAPL'], 'Years': ['2021', '2022'], 'augmented_query': ['Compare the risk associated with Apple stock for the year 2021', 'Compare the risk associated with Apple stock for the year 2022']}
-    # query_metadata = get_query_metadata(llm1_output_dict)
-    # relevant_sentences = get_relevant_docs(llm1_output_dict,query_metadata,restore_collection)
-    relevant_dict = get_relevant_dict_with_mmr(
-        llm1_output_dict, restore_collection, USER_REQUEST, if_finbert=True
-    )
-    relevant_sentences = get_relevant_docs_via_mmr(relevant_dict)
+    query_metadata = get_query_metadata(llm1_output_dict,doc_name="10-K")
+    relevant_sentences = get_relevant_docs(query_metadata,restore_collection,USER_REQUEST)
+    # relevant_dict = get_relevant_dict_with_mmr(
+    #     llm1_output_dict, restore_collection, USER_REQUEST, if_finbert=True
+    # )
+    # relevant_sentences = get_relevant_docs_via_mmr(relevant_dict)
     # print(relevant_sentences)
     llm2_output = get_response_llm2(relevant_sentences, USER_REQUEST, llm1_output_dict)
     # print(llm2_output)

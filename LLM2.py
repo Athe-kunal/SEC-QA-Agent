@@ -20,6 +20,8 @@ def get_response_llm2(relevant_sentences, user_query, llm1_output_dict):
 
     Don't make up any information, and if the relevant information is not present, then just give the most similar answer to the user query from the relevant documents and politely give a warning that the information that the user is looking for, may not be in the documents\n
     
+    Also, include all the relevant numerical figures\n
+    
     Recheck your answer so that it is more coherent with what user is asking\n
     """
 
