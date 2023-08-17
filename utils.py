@@ -3,7 +3,7 @@ from collections import defaultdict
 from langchain.vectorstores import Chroma
 import numpy as np
 from typing import List
-from langchain.math_utils import cosine_similarity
+from langchain.utils.math import cosine_similarity
 from requests.adapters import HTTPAdapter
 from collections import namedtuple
 from typing import List
