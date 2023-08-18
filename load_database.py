@@ -82,6 +82,13 @@ def load_vector_store_local(
         restore_collection = chroma_restore_client.get_collection(name=collection_name)
     return restore_collection
 
+def get_ui_relevant_docs(ui_relevant_docs_dict:dict):
+    ui_relevant_docs = ""
+    for key,value in ui_relevant_docs_dict.items():
+        ui_relevant_docs+=key+"\n"
+        ui_relevant_docs+=value
+        ui_relevant_docs+="\n\n"
+    return ui_relevant_docs
 
 def get_relevant_docs(query_metadata, restore_collection,user_request:str):
     # print(llm1_output_dict)
@@ -96,9 +103,13 @@ def get_relevant_docs(query_metadata, restore_collection,user_request:str):
         include=["metadatas", "documents", "distances", "embeddings"],
     )
     all_relevant_sentences = defaultdict(str)
+    ui_relevant_docs_dict = defaultdict(str)
+
     for docs, metadatas in zip(query_results["documents"], query_results["metadatas"]):
         for each_doc, each_metadata in zip(docs, metadatas):
             key = each_metadata["full_metadata"]
+            curr_section = " ".join(key.split("_")[2:-1])
+            ui_relevant_docs_dict[curr_section]+=each_doc
             all_relevant_sentences[key] += each_doc
 
     relevant_dict = modify_all_keys(all_relevant_sentences, key_modifier)
@@ -113,7 +124,7 @@ def get_relevant_docs(query_metadata, restore_collection,user_request:str):
         relevant_sentences += value
         relevant_sentences += "\n\n"
 
-    return relevant_sentences
+    return relevant_sentences, get_ui_relevant_docs(ui_relevant_docs_dict)
 
 
 def get_relevant_dict_with_mmr(
@@ -174,18 +185,15 @@ def get_relevant_dict_with_mmr(
 
 def get_relevant_docs_via_mmr(relevant_docs_dict: dict):
     relevant_sentences = ""
-
+    ui_relevant_docs_dict = defaultdict(str)
     for key, value in relevant_docs_dict.items():
         tic, year = key.split("_")
         relevant_sentences += f"Relevant documents for {tic} in the year {year}: " + "\n" 
         curr_docs = value["docs"]
-        # print(curr_docs)
-        # if not isinstance(curr_docs,str):
-        #     curr_docs = str(curr_docs)
-        # curr_docs = re.sub("\xa0", " ",curr_docs)
-        # curr_docs = re.sub("\t", " ",curr_docs)
-        # relevant_sentences += "\n ".join(value["docs"])
-        relevant_sentences += " ".join(value["docs"])
+        for idx,curr_metadata in enumerate(value["metadata"]):
+            curr_section = " ".join(curr_metadata['full_metadata'].split("_")[2:-1])
+            ui_relevant_docs_dict[curr_section]+=curr_docs[idx]
+        relevant_sentences += " ".join(curr_docs)
         relevant_sentences += "\n\n"
 
-    return relevant_sentences
+    return relevant_sentences,get_ui_relevant_docs(ui_relevant_docs_dict)

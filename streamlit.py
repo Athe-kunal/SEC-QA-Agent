@@ -5,15 +5,9 @@ import time
 st.title("SEC App")
 
 
-def generate_response(input_text):
-    return SEC_LLM(input_text)
+def generate_response(input_text,mmr:bool):
+    return SEC_LLM(input_text,mmr)
 
-
-# with st.form("my_form"):
-#     text = st.text_area("Enter Text:")
-#     submitted = st.form_submit_button("Submit")
-#     if submitted:
-#         generate_response(text)
 
 if "messages" not in st.session_state.keys():
     st.session_state.messages = [{"role": "assistant", "content": "Hi, how can I help you?"}]
@@ -31,9 +25,9 @@ if prompt := st.chat_input():
 if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
         with st.spinner("Answering..."):
-            response,relevant_sentences = generate_response(prompt) 
-            st.text(response) 
+            response,ui_relevant_sentences = generate_response(prompt,mmr=False) 
+            st.write(response) 
             expander = st.expander("See relevant Documents")
-            expander.text(relevant_sentences)
+            expander.text(ui_relevant_sentences)
     message = {"role": "assistant", "content": response}
     st.session_state.messages.append(message)
