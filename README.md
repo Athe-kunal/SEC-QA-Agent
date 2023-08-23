@@ -12,25 +12,26 @@ Please check the data folder to see the supported companies. If you want to down
 cd app
 ```
 To build the vector store
-```
+
+```console
 python3 build_database.py
 ```
 
 To run the streamlit application, run 
 
-```
+```console
 streamlit run streamlit.py
 ```
 
 Or you can directly build the docker file by 
 
-```
+```console
 docker build -t sec-10k-qa .
 ```
 
 And then run the docker container by 
 
-```
+```console
 docker run -p 8501:8501 sec-10k-qa
 ```
 
