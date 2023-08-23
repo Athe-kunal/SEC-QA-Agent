@@ -1,0 +1,8 @@
+{
+  # tickers: ['TSLA','AAPL','NVDA','INTC','MSFT','GOOGL','META','ADBE','CRM'],
+  tickers: ['FB'],
+  amount: 3,
+  filing_type: "10-K",
+  num_workers: 12,
+  include_amends: True
+}

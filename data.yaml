@@ -1,7 +1,0 @@
-{
-  tickers: ['TSLA','AAPL'],
-  amount: 2,
-  filing_type: "10-K",
-  num_workers: 2,
-  include_amends: False
-}

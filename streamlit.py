@@ -1,5 +1,5 @@
 import streamlit as st
-from main import SEC_LLM
+from app.main import SEC_LLM
 import time
 
 st.title("SEC App")
