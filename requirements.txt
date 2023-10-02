@@ -16,3 +16,4 @@ streamlit
 sentence_transformers
 wandb
 Faker
+pandas==2.0.3
