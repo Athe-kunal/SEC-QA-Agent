@@ -145,9 +145,7 @@ class SECDocument(HTMLDocument):
                         return section_elements
                     else:
                         in_section = False
-                elif isinstance(element, NarrativeText) or isinstance(
-                    element, ListItem
-                ):
+                elif isinstance(element, (NarrativeText, ListItem, Title)):
                     section_elements.append(element)
 
             if is_title and is_section_elem(section, element, self.filing_type):
@@ -291,7 +289,7 @@ def get_narrative_texts(
     if up_to_next_title:
         narrative_texts = []
         for el in doc.elements:
-            if isinstance(el, NarrativeText) or isinstance(el, ListItem):
+            if isinstance(el, (NarrativeText, ListItem, Title)):
                 narrative_texts.append(el)
             else:
                 break
@@ -300,7 +298,7 @@ def get_narrative_texts(
         return [
             el
             for el in doc.elements
-            if isinstance(el, NarrativeText) or isinstance(el, ListItem)
+            if isinstance(el, (NarrativeText, ListItem, Title))
         ]
 
 
